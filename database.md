@@ -127,6 +127,20 @@ CREATE TABLE Logins (
 | Transaction Dependency| Yes (Part of a transaction)                     | No                                          | No                                        |
 
 ---
+Below is a comparison between stored procedures, functions, Common Table Expressions (CTEs), and triggers:
+
+| Feature                   | Stored Procedures              | Functions                | CTEs                      | Triggers               |
+|---------------------------|--------------------------------|--------------------------|---------------------------|------------------------|
+| Definition                | Precompiled set of SQL statements stored in the database and executed as a single unit. | Callable routines that perform a specific task and return a single value or a table. | Temporary result set that can be referenced within a SELECT, INSERT, UPDATE, or DELETE statement. | Database objects that automatically execute in response to specified events (e.g., INSERT, UPDATE, DELETE). |
+| Usage                     | Executed using the EXECUTE or EXEC statement. Can perform a series of operations and transactions. | Can be called within SQL statements or other procedural code. Return a single value or a table. | Used to improve readability and maintainability of complex queries by breaking them into smaller, more manageable parts. | Automatically executed when a specified event occurs on a specific table or view. |
+| Parameters                | Can accept input parameters and return output parameters. | Can accept input parameters but must return a single value or table result. | Do not accept parameters directly but can reference parameters passed to the containing query. | Cannot accept parameters but can access data related to the triggering event. |
+| Transactions              | Can contain multiple SQL statements and transactions. Can begin and end transactions explicitly. | Cannot begin or end transactions explicitly. Operations are usually executed within the context of a transaction. | Cannot begin or end transactions explicitly. Operations are executed within the context of the containing query. | Can implicitly participate in the transaction initiated by the triggering statement. |
+| Modularity                | Typically used for reusable sets of SQL statements or business logic. Can be called from multiple locations. | Used for specific tasks or calculations, promoting code reuse and encapsulation. | Used for breaking down complex queries into smaller, more manageable parts, improving code readability. | Used for enforcing data integrity rules or implementing business logic in response to database events. |
+| Recursion                 | Supports recursion, allowing stored procedures to call themselves recursively. | Does not support recursion. | Does not support recursion. | Does not support recursion. |
+| Examples                  | - Procedure to process orders: process_order <br> - Procedure to generate reports: generate_report | - Function to calculate the total price of an order: calculate_total_price <br> - Function to format a date: format_date | - CTE to retrieve hierarchical data from an employee table: <br> WITH RecursiveCTE AS (SELECT * FROM Employees WHERE ManagerID IS NULL UNION ALL SELECT e.* FROM Employees e INNER JOIN RecursiveCTE r ON e.ManagerID = r.EmployeeID) SELECT * FROM RecursiveCTE | - Trigger to update a log table whenever a new order is inserted into the orders table: <br> CREATE TRIGGER NewOrderTrigger AFTER INSERT ON Orders FOR EACH ROW BEGIN INSERT INTO OrderLog (OrderID, OrderDate) VALUES (NEW.OrderID, NEW.OrderDate); END; |
+
+In summary, stored procedures, functions, CTEs, and triggers are all important database objects used for different purposes. Stored procedures and functions are used for encapsulating and executing business logic, while CTEs are used for improving the readability and maintainability of complex queries. Triggers are used for enforcing data integrity rules and implementing business logic in response to database events. Each has its own strengths and use cases, and understanding when to use each one is essential for effective database development and management.
+---
 
 **Overview of Relational Databases and Their Importance in Software Development** 
 
@@ -237,7 +251,102 @@ ChatGPT:
 - DBMS plays a crucial role in software development by providing tools and capabilities for efficient data management, storage, retrieval, and manipulation.
 - Understanding the role of DBMS and its components is essential for developers working on applications that rely on data storage and management.
 - Choosing the right type of DBMS and effectively managing database systems can have a significant impact on the performance, scalability, security, and reliability of software applications.
+---
+SQL data types represent the type of data that can be stored in a column of a database table. Choosing the appropriate data type is essential for efficient storage, data integrity, and query performance. Here are some common SQL data types and when to use them, along with examples:
 
+1. **Integer (INT)**:
+   - Used for whole numbers without fractional components.
+   - Suitable for storing counts, quantities, or identifiers.
+   - Example: Storing employee IDs, product quantities, or order numbers.
+   ```sql
+   CREATE TABLE Employees (
+       EmployeeID INT PRIMARY KEY,
+       FirstName VARCHAR(50),
+       LastName VARCHAR(50)
+   );
+   ```
+
+2. **Decimal or Numeric (DECIMAL or NUMERIC)**:
+   - Used for exact numeric values with a fixed number of digits before and after the decimal point.
+   - Suitable for storing monetary values, quantities with exact precision.
+   - Example: Storing prices, monetary amounts, or quantities with fixed precision.
+   ```sql
+   CREATE TABLE Products (
+       ProductID INT PRIMARY KEY,
+       ProductName VARCHAR(100),
+       Price DECIMAL(10, 2)
+   );
+   ```
+
+3. **Character (CHAR) and Variable Character (VARCHAR)**:
+   - CHAR: Fixed-length character string.
+   - VARCHAR: Variable-length character string.
+   - Used for storing alphanumeric or text data.
+   - CHAR is suitable for fixed-length data where space efficiency is a concern.
+   - VARCHAR is suitable for variable-length data with a maximum length limit.
+   - Example: Storing names, addresses, or descriptions.
+   ```sql
+   CREATE TABLE Customers (
+       CustomerID INT PRIMARY KEY,
+       FirstName VARCHAR(50),
+       LastName VARCHAR(50),
+       Address VARCHAR(255)
+   );
+   ```
+
+4. **Date and Time (DATE, TIME, DATETIME, TIMESTAMP)**:
+   - Used for storing date and time values.
+   - DATE: Stores the date only.
+   - TIME: Stores the time only.
+   - DATETIME: Stores both date and time.
+   - TIMESTAMP: Stores date and time along with timezone information.
+   - Example: Storing order dates, transaction timestamps.
+   ```sql
+   CREATE TABLE Orders (
+       OrderID INT PRIMARY KEY,
+       OrderDate DATE,
+       ShipDate DATETIME
+   );
+   ```
+
+5. **Boolean (BOOLEAN, BIT)**:
+   - Used for storing true/false or binary values.
+   - BOOLEAN: Standard SQL boolean data type.
+   - BIT: Typically used in databases like SQL Server and MySQL for storing binary data.
+   - Example: Storing flags indicating status (e.g., active/inactive, true/false).
+   ```sql
+   CREATE TABLE Users (
+       UserID INT PRIMARY KEY,
+       UserName VARCHAR(50),
+       IsActive BOOLEAN
+   );
+   ```
+
+6. **Blob and Clob (BLOB, CLOB)**:
+   - BLOB: Binary Large Object, used for storing large binary data such as images, audio, or video files.
+   - CLOB: Character Large Object, used for storing large text data.
+   - Example: Storing image files, document files, or large text content.
+   ```sql
+   CREATE TABLE Documents (
+       DocumentID INT PRIMARY KEY,
+       DocumentName VARCHAR(100),
+       Content BLOB
+   );
+   ```
+
+7. **Enumerated Types (ENUM)**:
+   - Used for defining a list of acceptable values for a column.
+   - Suitable for columns with a limited set of possible values.
+   - Example: Storing states (e.g., 'New', 'In Progress', 'Completed') or categories.
+   ```sql
+   CREATE TABLE Tasks (
+       TaskID INT PRIMARY KEY,
+       TaskName VARCHAR(100),
+       Status ENUM('New', 'In Progress', 'Completed')
+   );
+   ```
+
+Choosing the appropriate data type depends on factors such as the nature of the data, storage requirements, and query patterns. Selecting the right data type ensures efficient storage, data integrity, and optimal query performance in database systems.
 --- 
 - Introduction to SQL (Structured Query Language) and its significance in database operations.
 
@@ -978,6 +1087,21 @@ ChatGPT:
 - Adjust partitioning schemes as needed based on changes in data volume, query patterns, and system requirements.
 
 In summary, database partitioning is a valuable technique for improving performance, manageability, and scalability of large database tables. By carefully selecting partitioning methods and key columns, database administrators can optimize data storage and access for efficient query processing and data management.
+---
+
+Below is a comparison between database sharding and partitioning, along with examples presented in tabular form:
+
+| Feature               | Database Sharding                            | Database Partitioning                         |
+|-----------------------|---------------------------------------------|----------------------------------------------|
+| Definition            | Horizontal partitioning of data across multiple independent databases or servers. | Division of a single database table into smaller segments or partitions based on specific criteria. |
+| Distribution          | Data is distributed across multiple shards based on a shard key or hashing algorithm. | Data is divided into partitions within a single database instance. |
+| Scalability          | Scales out by adding more shards (database instances) to distribute the data and workload. | Scales vertically by optimizing data storage and access within a single database instance. |
+| Data Independence    | Each shard can function independently and may contain different subsets of data. | Partitions are managed within a single database instance and are typically interconnected. |
+| Complexity           | More complex to implement and manage due to the distributed nature of data across multiple shards. | Relatively simpler to implement and manage within a single database instance. |
+| Example              | Consider an e-commerce platform that shards customer data based on geographical regions. Each shard (database instance) serves customers from a specific region, such as North America, Europe, Asia, etc. | Consider a customer database table partitioned based on customer ID ranges. Each partition contains customer records with IDs falling within a specific range, such as 0-10000, 10001-20000, etc. |
+
+In summary, database sharding involves horizontally partitioning data across multiple independent database instances (shards), whereas database partitioning involves dividing data within a single database instance into smaller segments or partitions based on specific criteria. Sharding enables horizontal scalability and independence of shards, while partitioning simplifies data management within a single database instance. Each approach has its advantages and use cases, depending on the scalability requirements and data distribution patterns of the application.
+
 
 --- 
 - databas sharding
