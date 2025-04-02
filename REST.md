@@ -27,6 +27,9 @@ An architectural style for building scalable web services using HTTP. Resources 
 | `DELETE` | Yes         | No    | Remove resource                | `DELETE /users/123`  |  
 | `PATCH`  | No*         | No    | Partial update                 | `PATCH /users/123`   |  
 
+Idempotent methods - can called multiple times with same input and it produce same result. 
+Safe methods - doesn't modify the resource in server side.
+
 ---
 
 ### **4. HTTP Status Codes**  
