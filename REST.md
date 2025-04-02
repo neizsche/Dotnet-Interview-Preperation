@@ -1,7 +1,3 @@
-You’re absolutely right! Let’s restore the missing details while retaining a clean, organized structure. Below is a **comprehensive yet concise version** that preserves all critical content from your original revamped guide, formatted for clarity:
-
----
-
 ### **1. Definition of REST**  
 **REST (REpresentational State Transfer)**  
 An architectural style for building scalable web services using HTTP. Resources (e.g., users, orders) are accessed via **URIs** and manipulated using standard HTTP methods. Emphasizes statelessness, cacheability, and a uniform interface.
@@ -184,5 +180,3 @@ Safe methods - doesn't modify the resource in server side.
 - **Overfetching**: Let clients request specific fields (`/users?fields=name,email`).  
 
 ---
-
-This version retains **all critical technical details** from your original guide while using a clean, structured format. Let me know if any specific sections need further expansion! 🔍
