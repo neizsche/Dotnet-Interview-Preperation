@@ -544,9 +544,15 @@ public class ProductsController : ControllerBase
 
 1. What changed from `Startup.cs` to minimal hosting in .NET 6+?
 2. Why does middleware order matter in ASP.NET Core?
+
+Middleware order matters in ASP.NET Core because requests pass through the middleware pipeline sequentially. Each middleware can modify the request, short-circuit the pipeline, or call the next middleware. Some middleware depends on others—for example, authorization requires authentication to run first. If middleware is registered in the wrong order, features like authentication, exception handling, or routing may not work correctly. 
+
 3. What is the practical difference between `ControllerBase` and `Controller`?
 4. How do `[FromRoute]`, `[FromQuery]`, `[FromBody]`, and `[FromForm]` differ?
 5. What is the difference between `IActionResult` and `ActionResult<T>`?
+
+IActionResult represents any HTTP response and allows returning different result types like Ok, NotFound, or BadRequest. However, it does not specify the type of data returned in a successful response. ActionResult<T> improves this by combining a typed return value with HTTP results, allowing an action to return either a specific data type or an error response. This improves type safety and API documentation, especially for REST APIs.
+
 6. How does attribute routing with constraints improve API behavior?
 7. What does `launchSettings.json` do, and where should it not be used?
 8. How is environment-specific configuration loaded?
@@ -573,6 +579,9 @@ public class ProductsController : ControllerBase
 ## The Revision Bank
 
 1. Why did ASP.NET Core move from `Startup.cs` patterns to minimal hosting defaults?
+
+ASP.NET Core moved to the minimal hosting model to reduce boilerplate, simplify application configuration, and unify host and application setup into a single pipeline. Previously, applications required separate Program.cs and Startup.cs files with multiple abstractions like HostBuilder and WebHostBuilder. The minimal hosting model introduced WebApplicationBuilder, which consolidates service configuration, middleware setup, and hosting configuration into a simpler and more readable structure while still supporting advanced scenarios.
+
 2. What are the non-negotiable middleware ordering rules in a secured API?
 3. When should you use `Controller` instead of `ControllerBase`?
 4. Which model binding source is correct for JSON body vs multipart form uploads?
