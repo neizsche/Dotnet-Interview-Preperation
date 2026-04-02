@@ -1,4 +1,4 @@
-	# C# Language Fundamentals - Deep Dive
+# C# Language Fundamentals - Deep Dive
 
 ## 1. Data Types and Variables
 
@@ -419,320 +419,235 @@ bool result2 = Method1() && Method2(); // Output: "1" (short-circuited)
 ```
 
 This deep dive covers the fundamental concepts, implementation details, and tricky scenarios you'll encounter in interviews. Practice these patterns and understand the "why" behind each behavior.
-It looks like you’re asking about the difference between dynamic and var in .NET (which you wrote as “ditnet” — likely a typo). These are both keywords in C# used for declaring variables, but they behave very differently.
 
-⸻
+---
 
-✅ Quick Summary
+## 7. Quick Reference Comparisons
 
-Feature	var	dynamic
-Type Resolution	At compile time	At runtime
-IDE IntelliSense	Full support (shows members)	Limited or none
-Errors Caught	At compile time	Only at runtime
-Use Case	When type is clear or inferred	When type is unknown until runtime (e.g., from JSON, COM, reflection)
+### `var` vs `dynamic`
 
+These are both used when declaring variables in C#, but they behave very differently.
 
-⸻
+| Feature | `var` | `dynamic` |
+| --- | --- | --- |
+| Type resolution | At compile time | At runtime |
+| IntelliSense | Full support | Limited |
+| Error detection | Compile time | Runtime |
+| Best use case | When the type is obvious from the assignment | When the type is unknown until runtime |
 
-🔍 var
-	•	Type-safe: The compiler infers the type based on the right-hand side.
-	•	Compile-time checking: You get IntelliSense, type checking, and early error detection.
-	•	Cannot be null or uninitialized: The compiler must be able to infer the type.
+#### `var`
 
-Example:
+- Type-safe: the compiler infers the real type from the right-hand side.
+- Compile-time checking: you get IntelliSense, validation, and early errors.
+- Must be initialized so the compiler can infer the type.
 
+```csharp
 var name = "Alice";  // inferred as string
 var age = 30;        // inferred as int
 
-Trying this:
+// var something = null; // Compile-time error
+```
 
-var something = null;  // ❌ Compile-time error
+#### `dynamic`
 
+- Runtime-bound: member access and method resolution happen at runtime.
+- Flexible, but unsafe compared to `var`.
+- Useful with COM interop, reflection-heavy APIs, or dynamic JSON-like structures.
 
-⸻
-
-🔍 dynamic
-	•	Runtime-bound: The compiler skips type checking, and the actual type is resolved at runtime.
-	•	Can be dangerous: Errors only show up during execution, not at compile time.
-	•	Useful for interop with dynamic languages, reflection, COM objects, or dynamic JSON objects.
-
-Example:
-
+```csharp
 dynamic something = "Hello";
 Console.WriteLine(something.Length);  // OK
 
 something = 123;
-Console.WriteLine(something.Length);  // ❌ Runtime error: int has no Length
+Console.WriteLine(something.Length);  // RuntimeBinderException at runtime
+```
 
+#### When to use each
 
-⸻
+- Use `var` when the type is known or easily inferred and you want safety.
+- Use `dynamic` only when you intentionally want runtime binding.
 
-🧠 When to Use What
-	•	✅ Use var when the type is known or easily inferred and you want safety.
-	•	✅ Use dynamic only when you must defer type checking to runtime.
+#### Key point
 
-⸻
+- `var` is compiler syntax sugar. The actual type is fixed at compile time.
+- `dynamic` participates in runtime binding and skips normal compile-time member checks.
 
-⚠️ Key Point
+---
 
-Both var and dynamic are not types themselves:
-	•	var is syntactic sugar — the real type is determined at compile time.
-	•	dynamic is a real type — basically an alias for object, but with runtime binding.
+### `object` vs `dynamic`
 
-⸻
-Great — let’s break down the difference between dynamic and object in C#.
+Both can hold values of any type, but they differ in how member access is validated.
 
-They seem similar because both can hold any type of data, but how they behave — especially in terms of type checking and method resolution — is very different.
+| Feature | `object` | `dynamic` |
+| --- | --- | --- |
+| Type checking | Compile time | Runtime |
+| Member access | Requires cast | No cast required |
+| Error detection | Compile time | Runtime |
+| Performance | Faster | Slower due to runtime binding |
+| Best use case | General-purpose storage | Dynamic APIs, COM, reflection-heavy scenarios |
 
-⸻
+#### `object`
 
-✅ Quick Summary
+- Base type of all .NET types.
+- You can store anything in it, but you usually need to cast before using members.
 
-Feature	object	dynamic
-Type Checking	Compile-time	Runtime
-Member Access	Needs casting	No casting needed
-IntelliSense Support	❌ Limited or none (needs cast)	❌ None (compiler defers checking)
-Error Detection	Compile-time	Runtime only
-Performance	Faster	Slower (due to runtime binding)
-Use Case	Generic containers, base type	Dynamic JSON, COM interop, scripting APIs
-
-
-⸻
-
-🔍 object
-	•	Base type of all types in .NET.
-	•	You can store anything in an object, but to use it, you typically need to cast it back to the original type.
-
-Example:
-
+```csharp
 object obj = "hello";
 
-// Console.WriteLine(obj.Length); ❌ Compile-time error
-Console.WriteLine(((string)obj).Length);  // ✅ Must cast
+// Console.WriteLine(obj.Length); // Compile-time error
+Console.WriteLine(((string)obj).Length); // Must cast
+```
 
-	•	The compiler doesn’t know what’s inside obj unless you cast it.
-	•	Good for general-purpose containers, but not convenient when accessing members.
+#### `dynamic`
 
-⸻
+- Internally works like a general reference, but member resolution is deferred to runtime.
+- Convenient, but easier to break at execution time.
 
-🔍 dynamic
-	•	Internally treated like object, but with runtime type resolution.
-	•	You don’t need to cast before using its members — compiler defers all checking to runtime.
-
-Example:
-
+```csharp
 dynamic d = "hello";
-Console.WriteLine(d.Length);  // ✅ No cast needed
+Console.WriteLine(d.Length);  // Works
 
 d = 10;
-Console.WriteLine(d.Length);  // ❌ Runtime error (int has no Length)
+Console.WriteLine(d.Length);  // RuntimeBinderException
+```
 
-	•	You trade compile-time safety for runtime flexibility.
-	•	Great when working with:
-	•	Dynamic JSON (e.g., via Newtonsoft.Json)
-	•	COM objects
-	•	Reflection-heavy libraries
-	•	Duck typing
+#### Illustrated difference
 
-⸻
-
-🧠 Key Differences Illustrated
-
+```csharp
 object obj = "hello";
-Console.WriteLine(obj.Length);        // ❌ Compile-time error
+// Console.WriteLine(obj.Length); // Compile-time error
 
-dynamic d = "hello";
-Console.WriteLine(d.Length);          // ✅ Works (checked at runtime)
+dynamic dyn = "hello";
+Console.WriteLine(dyn.Length); // Checked at runtime
+```
 
+#### Guidance
 
-⸻
+- Use `object` when you want compiler safety and explicit casts.
+- Use `dynamic` when the shape of the data is genuinely unknown until runtime.
 
-⚠️ Warning
-	•	dynamic bypasses compile-time safety — so:
-	•	Fewer errors at compile time
-	•	More risk of runtime exceptions
-	•	object requires explicit handling but gives better compiler support
+---
 
-⸻
+### `&` vs `&&`
 
-✅ When to Use
+These operators look similar but behave differently.
 
-Situation	Use object	Use dynamic
-Generic data container	✅ Yes	Maybe, but overkill
-Accessing members/methods	❌ Needs cast	✅ Easier access
-Working with unknown structures (e.g. JSON)	❌ Clumsy	✅ Ideal
-Performance-sensitive code	✅ Preferable	❌ Avoid if possible
+| Operator | Meaning | Works with | Short-circuits | Common use |
+| --- | --- | --- | --- | --- |
+| `&` | Bitwise AND or logical AND | Integers and booleans | No | Bitwise work or forcing both boolean expressions to run |
+| `&&` | Logical AND | Booleans only | Yes | Conditional checks in `if`, `while`, and guards |
 
+#### `&&`
 
-⸻
+- Evaluates the left side first.
+- If the left side is `false`, the right side is skipped.
+- This makes it safer for null checks.
 
-Great question — & and && are both logical/bitwise operators in C#, but they have different behavior and use cases.
+```csharp
+bool a = false;
+bool b = true;
 
-⸻
-
-✅ Quick Summary
-
-Operator	Name	Use With	Short-Circuit?	Common Use
-&	Bitwise AND / Logical AND	Booleans or integers	❌ No	Bitwise operations or full boolean eval
-&&	Logical AND (short-circuit)	Booleans only	✅ Yes	Boolean conditions in if, while, etc.
-
-
-⸻
-
-🔍 Detailed Explanation
-
-1. && — Logical AND (Short-Circuit)
-	•	Only works with boolean values.
-	•	If the first operand is false, the second is NOT evaluated.
-	•	Prevents unnecessary or dangerous evaluation.
-
-Example:
-
-bool A = false;
-bool B = true;
-
-if (A && B)
+if (a && b)
 {
-    // Won't execute, because A is false (short-circuits)
+    // Does not execute
 }
-
-Why use &&?
 
 if (obj != null && obj.SomeProperty == 5)
 {
-    // Safe: won't throw NullReferenceException
+    // Safe null check pattern
 }
+```
 
-If you used & here instead, and obj was null, it would still evaluate obj.SomeProperty and crash.
+#### `&`
 
-⸻
+- With booleans, both sides are always evaluated.
+- With integers, it performs a bitwise AND.
 
-2. & — Bitwise AND (also Logical AND, but no short-circuit)
+```csharp
+bool a = false;
+bool b = true;
 
-a) Boolean context
-	•	Works like &&, but always evaluates both sides, even if the first is false.
-
-bool A = false;
-bool B = true;
-
-if (A & B)
+if (a & b)
 {
-    // Still false, but B is evaluated anyway
+    // Still false, but both expressions were evaluated
 }
-
-b) Bitwise context
-	•	Operates on bits when used with integers.
 
 int x = 5;      // 0101
 int y = 3;      // 0011
 int z = x & y;  // 0001 => 1
+```
 
+#### Use case tip
 
-⸻
+- Use `&&` for regular boolean logic.
+- Use `&` for bitwise operations or rare cases where both boolean expressions must run.
 
-🧠 Summary Use Case Tips
-	•	✅ Use && for boolean logic in conditions (if/while), where short-circuiting is beneficial.
-	•	✅ Use & for bitwise operations or when you need to force both sides to evaluate (rare in boolean logic).
+---
 
-⸻
+### `|` vs `||`
 
-Absolutely! Let’s do a side-by-side breakdown of | vs ||, just like we did for & vs &&.
+These are the OR equivalents of `&` and `&&`.
 
-⸻
+| Operator | Meaning | Works with | Short-circuits | Common use |
+| --- | --- | --- | --- | --- |
+| `|` | Bitwise OR or logical OR | Integers and booleans | No | Bit flags or forcing both boolean expressions to run |
+| `||` | Logical OR | Booleans only | Yes | Conditional checks where one true condition is enough |
 
-✅ Quick Summary
+#### `||`
 
-Operator	Name	Use With	Short-Circuit?	Common Use
-`	`	Bitwise OR / Logical OR	Booleans or integers	❌ No
-`		`	Logical OR (short-circuit)	Booleans only
+- If the left side is `true`, the right side is skipped.
+- This is the usual choice in control flow.
 
+```csharp
+bool a = true;
+bool b = false;
 
-⸻
-
-🔍 Detailed Explanation
-
-1. || — Logical OR (Short-Circuit)
-	•	Boolean-only.
-	•	If the first operand is true, the second operand is skipped.
-	•	Used for efficiency and safety in conditions.
-
-Example:
-
-bool A = true;
-bool B = false;
-
-if (A || B)
+if (a || b)
 {
-    // Executes because A is true; B is NOT evaluated
+    // Executes because a is true
 }
-
-Practical Use:
 
 if (user == null || user.IsDisabled)
 {
-    // Safe: won't throw NullReferenceException
+    // Safe: user.IsDisabled is not evaluated when user is null
 }
+```
 
+#### `|`
 
-⸻
+- With booleans, both sides are evaluated.
+- With integers, it performs a bitwise OR.
 
-2. | — Bitwise OR / Logical OR (non-short-circuit)
+```csharp
+bool a = true;
+bool b = false;
 
-a) Boolean context
-	•	Like ||, but both sides are always evaluated, even if the first is true.
-
-bool A = true;
-bool B = false;
-
-if (A | B)
+if (a | b)
 {
-    // Still true, but B is evaluated anyway
+    // True, and both expressions are evaluated
 }
-
-b) Bitwise context
-	•	Works on the binary representation of integers.
 
 int x = 5;      // 0101
 int y = 3;      // 0011
 int z = x | y;  // 0111 => 7
+```
 
+#### Use case tip
 
-⸻
+- Use `||` for normal boolean logic.
+- Use `|` for bitwise operations, flags, or rare cases where both expressions must run.
 
-⚠️ Key Differences
+#### Bit flags example
 
-| Feature                        | ||            | |              |
-|—————————––|——————|——————|
-| Short-circuit evaluation       | ✅ Yes           | ❌ No             |
-| Works with integers (bitwise) | ❌ No            | ✅ Yes            |
-| Safer in null/logic checks     | ✅ Often safer   | ❌ Might throw if second side fails |
-
-⸻
-
-🧠 Use Case Tips
-	•	✅ Use || for regular boolean logic in control flow, like if, while.
-	•	✅ Use | for:
-	•	Bitwise operations
-	•	When both boolean expressions must be evaluated (rare)
-	•	Working with flags/enums
-
-⸻
-
-Bonus: Enums & Bit Flags
-
-| is commonly used with enums marked with [Flags]:
-
+```csharp
 [Flags]
-enum FileAccess {
+enum FileAccess
+{
     Read = 1,
     Write = 2,
     Execute = 4
 }
 
 var permissions = FileAccess.Read | FileAccess.Write;
-
 bool canWrite = (permissions & FileAccess.Write) != 0;
-
-⸻
-⸻
-
+```
