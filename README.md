@@ -2,512 +2,470 @@
 
 > Question bank with clickable table-of-contents links and answer placeholders for later expansion.
 
-**Status:** Question structure ready  
-**Total questions:** 391
+**Status:** Question structure ready · **Total questions:** 391
 
----
 ---
 
 <a id="table-of-contents"></a>
-### Table of Contents
 
-| Section | Topic                                                          | Questions |
-| ------- | -------------------------------------------------------------- | --------: |
-| 1       | [1. OOPS Fundamentals](#section-1)                             |        38 |
-| 2       | [2. Interface and Abstract Class](#section-2)                  |        22 |
-| 3       | [3. SOLID Principles and Architecture](#section-3)             |        19 |
-| 4       | [4. Design Patterns](#section-4)                               |        25 |
-| 5       | [5. Dependency Injection](#section-5)                          |        10 |
-| 6       | [6. C# Core Concepts](#section-6)                              |       134 |
-| 7       | [7. ASP.NET Core and APIs](#section-7)                         |        23 |
-| 8       | [8. LINQ and Collections](#section-8)                          |        29 |
-| 9       | [9. SQL](#section-9)                                           |        26 |
-| 10      | [10. Frontend: Angular and React](#section-10)                 |        19 |
-| 11      | [11. System Design, Performance, and Scalability](#section-11) |        19 |
-| 12      | [12. Testing](#section-12)                                     |        10 |
-| 13      | [13. Git, DevOps, and Cloud](#section-13)                      |        10 |
-| 14      | [14. Coding Questions Asked](#section-14)                      |         7 |
+## Table of Contents
 
 ---
----
 
+#### [1. OOPS Fundamentals](#section-1) — 38 questions
 
-<details open>
-<summary><a href="#section-1"><strong>1. OOPS Fundamentals</strong></a> (38 questions)</summary>
-
-| No.  | Question                                                                                                             |
-| ---- | -------------------------------------------------------------------------------------------------------------------- |
-| 1.1  | [Explain the four OOP principles with real-world examples.](#q-1-1)                                                  |
-| 1.2  | [What is encapsulation?](#q-1-2)                                                                                     |
-| 1.3  | [How do getters and setters support encapsulation and controlled mutation?](#q-1-3)                                  |
-| 1.4  | [Show encapsulation with example.](#q-1-4)                                                                           |
-| 1.5  | [What is abstraction?](#q-1-5)                                                                                       |
-| 1.6  | [Difference between abstraction and encapsulation?](#q-1-6)                                                          |
-| 1.7  | [What are access modifiers in C#?](#q-1-7)                                                                           |
-| 1.8  | [Difference between `public`, `private`, `protected`, `internal`, and `protected internal`?](#q-1-8)                 |
-| 1.9  | [How do access modifiers support encapsulation?](#q-1-9)                                                             |
-| 1.10 | [What is inheritance?](#q-1-10)                                                                                      |
-| 1.11 | [Explain inheritance using Animal/Dog example.](#q-1-11)                                                             |
-| 1.12 | [How do you achieve multiple inheritance in C#?](#q-1-12)                                                            |
-| 1.13 | [What is polymorphism?](#q-1-13)                                                                                     |
-| 1.14 | [Difference between compile-time and runtime polymorphism?](#q-1-14)                                                 |
-| 1.15 | [What is method overloading?](#q-1-15)                                                                               |
-| 1.16 | [Why is overloading not possible using return type alone?](#q-1-16)                                                  |
-| 1.17 | [What is method overriding?](#q-1-17)                                                                                |
-| 1.18 | [Difference between method overloading and method overriding](#q-1-18)                                               |
+| No. | Question |
+| --- | -------- |
+| 1.1 | [Explain the four OOP principles with real-world examples.](#q-1-1) |
+| 1.2 | [What is encapsulation?](#q-1-2) |
+| 1.3 | [How do getters and setters support encapsulation and controlled mutation?](#q-1-3) |
+| 1.4 | [Show encapsulation with example.](#q-1-4) |
+| 1.5 | [What is abstraction?](#q-1-5) |
+| 1.6 | [Difference between abstraction and encapsulation?](#q-1-6) |
+| 1.7 | [What are access modifiers in C#?](#q-1-7) |
+| 1.8 | [Difference between `public`, `private`, `protected`, `internal`, and `protected internal`?](#q-1-8) |
+| 1.9 | [How do access modifiers support encapsulation?](#q-1-9) |
+| 1.10 | [What is inheritance?](#q-1-10) |
+| 1.11 | [Explain inheritance using Animal/Dog example.](#q-1-11) |
+| 1.12 | [How do you achieve multiple inheritance in C#?](#q-1-12) |
+| 1.13 | [What is polymorphism?](#q-1-13) |
+| 1.14 | [Difference between compile-time and runtime polymorphism?](#q-1-14) |
+| 1.15 | [What is method overloading?](#q-1-15) |
+| 1.16 | [Why is overloading not possible using return type alone?](#q-1-16) |
+| 1.17 | [What is method overriding?](#q-1-17) |
+| 1.18 | [Difference between method overloading and method overriding](#q-1-18) |
 | 1.19 | [What happens when both parent and child define the same method? Explain `virtual`, `override`, and `new`.](#q-1-19) |
-| 1.20 | [What is method hiding in C#?](#q-1-20)                                                                              |
-| 1.21 | [Difference between method hiding and method overriding](#q-1-21)                                                    |
-| 1.22 | [Purpose of the `new` keyword in method hiding](#q-1-22)                                                             |
-| 1.23 | [What is the difference between `virtual`, `override`, and `abstract`?](#q-1-23)                                     |
-| 1.24 | [Difference between `virtual`, `override`, and `new`](#q-1-24)                                                       |
-| 1.25 | [What is upcasting vs downcasting?](#q-1-25)                                                                         |
-| 1.26 | [What happens during invalid downcasting, and why does it fail?](#q-1-26)                                            |
-| 1.27 | [How does method overriding behave during upcasting and downcasting?](#q-1-27)                                       |
-| 1.28 | [What is early binding vs late binding?](#q-1-28)                                                                    |
-| 1.29 | [What is virtual method dispatch?](#q-1-29)                                                                          |
-| 1.30 | [What is a virtual method table, and how does the CLR decide which overridden method to execute?](#q-1-30)           |
-| 1.31 | [How does runtime polymorphism work internally?](#q-1-31)                                                            |
-| 1.32 | [What happens internally during method overriding?](#q-1-32)                                                         |
-| 1.33 | [Can static methods participate in polymorphism? Why can’t they be virtual?](#q-1-33)                                |
-| 1.34 | [What are constructors in C#?](#q-1-34)                                                                              |
-| 1.35 | [Difference between instance constructors and static constructors](#q-1-35)                                          |
-| 1.36 | [What are primary constructors?](#q-1-36)                                                                            |
-| 1.37 | [What is constructor chaining?](#q-1-37)                                                                             |
-| 1.38 | [How do constructors work during inheritance, and what is the execution flow in an inheritance hierarchy?](#q-1-38)  |
+| 1.20 | [What is method hiding in C#?](#q-1-20) |
+| 1.21 | [Difference between method hiding and method overriding](#q-1-21) |
+| 1.22 | [Purpose of the `new` keyword in method hiding](#q-1-22) |
+| 1.23 | [What is the difference between `virtual`, `override`, and `abstract`?](#q-1-23) |
+| 1.24 | [Difference between `virtual`, `override`, and `new`](#q-1-24) |
+| 1.25 | [What is upcasting vs downcasting?](#q-1-25) |
+| 1.26 | [What happens during invalid downcasting, and why does it fail?](#q-1-26) |
+| 1.27 | [How does method overriding behave during upcasting and downcasting?](#q-1-27) |
+| 1.28 | [What is early binding vs late binding?](#q-1-28) |
+| 1.29 | [What is virtual method dispatch?](#q-1-29) |
+| 1.30 | [What is a virtual method table, and how does the CLR decide which overridden method to execute?](#q-1-30) |
+| 1.31 | [How does runtime polymorphism work internally?](#q-1-31) |
+| 1.32 | [What happens internally during method overriding?](#q-1-32) |
+| 1.33 | [Can static methods participate in polymorphism? Why can’t they be virtual?](#q-1-33) |
+| 1.34 | [What are constructors in C#?](#q-1-34) |
+| 1.35 | [Difference between instance constructors and static constructors](#q-1-35) |
+| 1.36 | [What are primary constructors?](#q-1-36) |
+| 1.37 | [What is constructor chaining?](#q-1-37) |
+| 1.38 | [How do constructors work during inheritance, and what is the execution flow in an inheritance hierarchy?](#q-1-38) |
 
-</details>
+---
 
-<details open>
-<summary><a href="#section-2"><strong>2. Interface and Abstract Class</strong></a> (22 questions)</summary>
+---
+#### [2. Interface and Abstract Class](#section-2) — 22 questions
 
-| No.  | Question                                                                                                |
-| ---- | ------------------------------------------------------------------------------------------------------- |
-| 2.1  | [What is an interface?](#q-2-1)                                                                         |
-| 2.2  | [What is an abstract class?](#q-2-2)                                                                    |
-| 2.3  | [Difference between interface and abstract class?](#q-2-3)                                              |
-| 2.4  | [When would you use interface vs abstract class?](#q-2-4)                                               |
-| 2.5  | [When should you use an abstract class?](#q-2-5)                                                        |
-| 2.6  | [Why use interfaces instead of concrete classes?](#q-2-6)                                               |
-| 2.7  | [How do interfaces reduce coupling?](#q-2-7)                                                            |
-| 2.8  | [Why depend on abstractions instead of implementations?](#q-2-8)                                        |
-| 2.9  | [Can interfaces have implementation?](#q-2-9)                                                           |
-| 2.10 | [Can interfaces contain fields or state?](#q-2-10)                                                      |
-| 2.11 | [Can interfaces inherit interfaces?](#q-2-11)                                                           |
-| 2.12 | [What happens if two interfaces have the same method signature?](#q-2-12)                               |
-| 2.13 | [What is explicit interface implementation?](#q-2-13)                                                   |
-| 2.14 | [Can abstract methods exist in non-abstract classes?](#q-2-14)                                          |
-| 2.15 | [Can abstract classes have constructors?](#q-2-15)                                                      |
-| 2.16 | [Can abstract classes contain fields or state?](#q-2-16)                                                |
-| 2.17 | [Can abstract classes implement interfaces?](#q-2-17)                                                   |
-| 2.18 | [Difference between abstract method and virtual method?](#q-2-18)                                       |
-| 2.19 | [Why does C# support multiple inheritance only through interfaces?](#q-2-19)                            |
+| No. | Question |
+| --- | -------- |
+| 2.1 | [What is an interface?](#q-2-1) |
+| 2.2 | [What is an abstract class?](#q-2-2) |
+| 2.3 | [Difference between interface and abstract class?](#q-2-3) |
+| 2.4 | [When would you use interface vs abstract class?](#q-2-4) |
+| 2.5 | [When should you use an abstract class?](#q-2-5) |
+| 2.6 | [Why use interfaces instead of concrete classes?](#q-2-6) |
+| 2.7 | [How do interfaces reduce coupling?](#q-2-7) |
+| 2.8 | [Why depend on abstractions instead of implementations?](#q-2-8) |
+| 2.9 | [Can interfaces have implementation?](#q-2-9) |
+| 2.10 | [Can interfaces contain fields or state?](#q-2-10) |
+| 2.11 | [Can interfaces inherit interfaces?](#q-2-11) |
+| 2.12 | [What happens if two interfaces have the same method signature?](#q-2-12) |
+| 2.13 | [What is explicit interface implementation?](#q-2-13) |
+| 2.14 | [Can abstract methods exist in non-abstract classes?](#q-2-14) |
+| 2.15 | [Can abstract classes have constructors?](#q-2-15) |
+| 2.16 | [Can abstract classes contain fields or state?](#q-2-16) |
+| 2.17 | [Can abstract classes implement interfaces?](#q-2-17) |
+| 2.18 | [Difference between abstract method and virtual method?](#q-2-18) |
+| 2.19 | [Why does C# support multiple inheritance only through interfaces?](#q-2-19) |
 | 2.20 | [What is the diamond problem, and how does C# handle it with interfaces and abstract classes?](#q-2-20) |
-| 2.21 | [Why not use interfaces everywhere?](#q-2-21)                                                           |
-| 2.22 | [Why not use abstract classes everywhere?](#q-2-22)                                                     |
+| 2.21 | [Why not use interfaces everywhere?](#q-2-21) |
+| 2.22 | [Why not use abstract classes everywhere?](#q-2-22) |
 
-</details>
+---
 
-<details open>
-<summary><a href="#section-3"><strong>3. SOLID Principles and Architecture</strong></a> (19 questions)</summary>
+---
+#### [3. SOLID Principles and Architecture](#section-3) — 19 questions
 
-| No.  | Question                                                                       |
-| ---- | ------------------------------------------------------------------------------ |
-| 3.1  | [Explain SOLID principles.](#q-3-1)                                            |
-| 3.2  | [What do you mean by coupling and cohesion?](#q-3-2)                           |
-| 3.3  | [Explain Single Responsibility Principle.](#q-3-3)                             |
-| 3.4  | [Explain Open Closed Principle.](#q-3-4)                                       |
-| 3.5  | [Explain Liskov Substitution Principle.](#q-3-5)                               |
-| 3.6  | [Explain Interface Segregation Principle.](#q-3-6)                             |
-| 3.7  | [Explain Dependency Inversion Principle.](#q-3-7)                              |
-| 3.8  | [What is the difference between SRP and ISP?](#q-3-8)                          |
-| 3.9  | [Which SOLID principle is behavioral?](#q-3-9)                                 |
-| 3.10 | [What are the practical benefits of implementing DIP?](#q-3-10)                |
-| 3.11 | [Why prefer composition over inheritance?](#q-3-11)                            |
-| 3.12 | [How do interfaces improve maintainability?](#q-3-12)                          |
-| 3.13 | [How do abstractions improve scalability?](#q-3-13)                            |
-| 3.14 | [What is layered architecture, and how do you make it decoupled?](#q-3-14)     |
+| No. | Question |
+| --- | -------- |
+| 3.1 | [Explain SOLID principles.](#q-3-1) |
+| 3.2 | [What do you mean by coupling and cohesion?](#q-3-2) |
+| 3.3 | [Explain Single Responsibility Principle.](#q-3-3) |
+| 3.4 | [Explain Open Closed Principle.](#q-3-4) |
+| 3.5 | [Explain Liskov Substitution Principle.](#q-3-5) |
+| 3.6 | [Explain Interface Segregation Principle.](#q-3-6) |
+| 3.7 | [Explain Dependency Inversion Principle.](#q-3-7) |
+| 3.8 | [What is the difference between SRP and ISP?](#q-3-8) |
+| 3.9 | [Which SOLID principle is behavioral?](#q-3-9) |
+| 3.10 | [What are the practical benefits of implementing DIP?](#q-3-10) |
+| 3.11 | [Why prefer composition over inheritance?](#q-3-11) |
+| 3.12 | [How do interfaces improve maintainability?](#q-3-12) |
+| 3.13 | [How do abstractions improve scalability?](#q-3-13) |
+| 3.14 | [What is layered architecture, and how do you make it decoupled?](#q-3-14) |
 | 3.15 | [What is the responsibility of each layer in a layered architecture?](#q-3-15) |
-| 3.16 | [What is cyclic dependency, and how do you break it?](#q-3-16)                 |
-| 3.17 | [How would you isolate provider-specific behavior?](#q-3-17)                   |
-| 3.18 | [Give real-world examples of SOLID.](#q-3-18)                                  |
-| 3.19 | [How did you apply SOLID in your project?](#q-3-19)                            |
+| 3.16 | [What is cyclic dependency, and how do you break it?](#q-3-16) |
+| 3.17 | [How would you isolate provider-specific behavior?](#q-3-17) |
+| 3.18 | [Give real-world examples of SOLID.](#q-3-18) |
+| 3.19 | [How did you apply SOLID in your project?](#q-3-19) |
 
-</details>
+---
+#### [4. Design Patterns](#section-4) — 25 questions
 
-<details open>
-<summary><a href="#section-4"><strong>4. Design Patterns</strong></a> (25 questions)</summary>
-
-| No.  | Question                                                                  |
-| ---- | ------------------------------------------------------------------------- |
-| 4.1  | [What are design patterns?](#q-4-1)                                       |
-| 4.2  | [Difference between design pattern and architecture pattern?](#q-4-2)     |
-| 4.3  | [Which design patterns are commonly used in .NET applications?](#q-4-3)   |
-| 4.4  | [What design patterns have you used in your projects?](#q-4-4)            |
-| 4.5  | [What is Inversion of Control?](#q-4-5)                                   |
-| 4.6  | [What is Dependency Injection pattern?](#q-4-6)                           |
-| 4.7  | [How does dependency injection relate to IoC?](#q-4-7)                    |
-| 4.8  | [What is Singleton pattern?](#q-4-8)                                      |
-| 4.9  | [Where would you use Singleton?](#q-4-9)                                  |
-| 4.10 | [Problems with Singleton?](#q-4-10)                                       |
-| 4.11 | [How would you implement a thread-safe Singleton?](#q-4-11)               |
-| 4.12 | [Write a thread-safe Singleton implementation](#q-4-12)                   |
-| 4.13 | [What is Factory pattern?](#q-4-13)                                       |
-| 4.14 | [Difference between Factory and Abstract Factory?](#q-4-14)               |
-| 4.15 | [What is Builder pattern?](#q-4-15)                                       |
-| 4.16 | [What is Strategy pattern?](#q-4-16)                                      |
-| 4.17 | [Real-world example of Strategy pattern?](#q-4-17)                        |
-| 4.18 | [What is Observer pattern?](#q-4-18)                                      |
-| 4.19 | [What is Adapter pattern?](#q-4-19)                                       |
-| 4.20 | [What is Facade pattern?](#q-4-20)                                        |
-| 4.21 | [What is Repository pattern?](#q-4-21)                                    |
-| 4.22 | [Why use Repository pattern?](#q-4-22)                                    |
-| 4.23 | [What is Unit of Work pattern?](#q-4-23)                                  |
+| No. | Question |
+| --- | -------- |
+| 4.1 | [What are design patterns?](#q-4-1) |
+| 4.2 | [Difference between design pattern and architecture pattern?](#q-4-2) |
+| 4.3 | [Which design patterns are commonly used in .NET applications?](#q-4-3) |
+| 4.4 | [What design patterns have you used in your projects?](#q-4-4) |
+| 4.5 | [What is Inversion of Control?](#q-4-5) |
+| 4.6 | [What is Dependency Injection pattern?](#q-4-6) |
+| 4.7 | [How does dependency injection relate to IoC?](#q-4-7) |
+| 4.8 | [What is Singleton pattern?](#q-4-8) |
+| 4.9 | [Where would you use Singleton?](#q-4-9) |
+| 4.10 | [Problems with Singleton?](#q-4-10) |
+| 4.11 | [How would you implement a thread-safe Singleton?](#q-4-11) |
+| 4.12 | [Write a thread-safe Singleton implementation](#q-4-12) |
+| 4.13 | [What is Factory pattern?](#q-4-13) |
+| 4.14 | [Difference between Factory and Abstract Factory?](#q-4-14) |
+| 4.15 | [What is Builder pattern?](#q-4-15) |
+| 4.16 | [What is Strategy pattern?](#q-4-16) |
+| 4.17 | [Real-world example of Strategy pattern?](#q-4-17) |
+| 4.18 | [What is Observer pattern?](#q-4-18) |
+| 4.19 | [What is Adapter pattern?](#q-4-19) |
+| 4.20 | [What is Facade pattern?](#q-4-20) |
+| 4.21 | [What is Repository pattern?](#q-4-21) |
+| 4.22 | [Why use Repository pattern?](#q-4-22) |
+| 4.23 | [What is Unit of Work pattern?](#q-4-23) |
 | 4.24 | [Difference between Singleton, Factory, and Repository patterns](#q-4-24) |
-| 4.25 | [What is CQRS?](#q-4-25)                                                  |
+| 4.25 | [What is CQRS?](#q-4-25) |
 
-</details>
+---
+#### [5. Dependency Injection](#section-5) — 10 questions
 
-<details open>
-<summary><a href="#section-5"><strong>5. Dependency Injection</strong></a> (10 questions)</summary>
+| No. | Question |
+| --- | -------- |
+| 5.1 | [What is Inversion of Control?](#q-5-1) |
+| 5.2 | [What is dependency injection?](#q-5-2) |
+| 5.3 | [What problems does dependency injection solve?](#q-5-3) |
+| 5.4 | [What happens if you instantiate concrete implementations directly?](#q-5-4) |
+| 5.5 | [How is DI implemented in .NET?](#q-5-5) |
+| 5.6 | [Explain the three DI service lifetimes: Transient, Scoped, and Singleton.](#q-5-6) |
+| 5.7 | [Which lifetime is used for DbContext?](#q-5-7) |
+| 5.8 | [What problems happen with Singleton misuse?](#q-5-8) |
+| 5.9 | [What is captive dependency?](#q-5-9) |
+| 5.10 | [How does DI help in unit testing and mocking?](#q-5-10) |
 
-| No.  | Question                                                                            |
-| ---- | ----------------------------------------------------------------------------------- |
-| 5.1  | [What is Inversion of Control?](#q-5-1)                                             |
-| 5.2  | [What is dependency injection?](#q-5-2)                                             |
-| 5.3  | [What problems does dependency injection solve?](#q-5-3)                            |
-| 5.4  | [What happens if you instantiate concrete implementations directly?](#q-5-4)        |
-| 5.5  | [How is DI implemented in .NET?](#q-5-5)                                            |
-| 5.6  | [Explain the three DI service lifetimes: Transient, Scoped, and Singleton.](#q-5-6) |
-| 5.7  | [Which lifetime is used for DbContext?](#q-5-7)                                     |
-| 5.8  | [What problems happen with Singleton misuse?](#q-5-8)                               |
-| 5.9  | [What is captive dependency?](#q-5-9)                                               |
-| 5.10 | [How does DI help in unit testing and mocking?](#q-5-10)                            |
+---
+#### [6. C# Core Concepts](#section-6) — 112 questions
 
-</details>
+| No. | Question |
+| --- | -------- |
+| 6.1 | [What is a static class?](#q-6-1) |
+| 6.2 | [When should you use a static class?](#q-6-2) |
+| 6.3 | [What are the limitations of static classes?](#q-6-3) |
+| 6.4 | [Difference between static constructor and private constructor](#q-6-4) |
+| 6.5 | [How do static members work internally?](#q-6-5) |
+| 6.6 | [Why does the CLR provide thread safety for static constructors?](#q-6-6) |
+| 6.7 | [Order of execution of static constructors and instance constructors](#q-6-7) |
+| 6.8 | [What is a sealed class?](#q-6-8) |
+| 6.9 | [Why would you seal a class or method?](#q-6-9) |
+| 6.10 | [Difference between class, struct, and record](#q-6-10) |
+| 6.11 | [Difference between class and struct](#q-6-11) |
+| 6.12 | [When should you use a struct instead of a class?](#q-6-12) |
+| 6.13 | [Why are structs value types?](#q-6-13) |
+| 6.14 | [What are records in C# and why were they introduced?](#q-6-14) |
+| 6.15 | [What problems do records solve?](#q-6-15) |
+| 6.16 | [What are extension methods?](#q-6-16) |
+| 6.17 | [How are extension methods implemented under the hood?](#q-6-17) |
+| 6.18 | [What is Reflection?](#q-6-18) |
+| 6.19 | [What are delegates in C#?](#q-6-19) |
+| 6.20 | [How do delegates work internally?](#q-6-20) |
+| 6.21 | [What are multicast delegates?](#q-6-21) |
+| 6.22 | [Difference between delegates and events](#q-6-22) |
+| 6.23 | [Why use events over delegates?](#q-6-23) |
+| 6.24 | [How are events implemented internally in .NET?](#q-6-24) |
+| 6.25 | [When would you use events in real-world applications?](#q-6-25) |
+| 6.26 | [What is the practical use of delegates?](#q-6-26) |
+| 6.27 | [Difference between Action, Func, and Predicate](#q-6-27) |
+| 6.28 | [What are generic classes in C#?](#q-6-28) |
+| 6.29 | [Why are generics important?](#q-6-29) |
+| 6.30 | [How do generics work internally in .NET?](#q-6-30) |
+| 6.31 | [Why are generics type-safe?](#q-6-31) |
+| 6.32 | [What are generic constraints?](#q-6-32) |
+| 6.33 | [Types of generic constraints in C#](#q-6-33) |
+| 6.34 | [Difference between covariance, contravariance, and invariance](#q-6-34) |
+| 6.35 | [Where are covariance and contravariance used in .NET?](#q-6-35) |
+| 6.36 | [What is boxing and unboxing?](#q-6-36) |
+| 6.37 | [What happens internally during boxing and unboxing?](#q-6-37) |
+| 6.38 | [Why are boxing and unboxing expensive?](#q-6-38) |
+| 6.39 | [What are nullable types in C#?](#q-6-39) |
+| 6.40 | [How does `Nullable<T>` work internally?](#q-6-40) |
+| 6.41 | [Where are nullable types stored in memory?](#q-6-41) |
+| 6.42 | [Difference between `const`, `readonly`, and `static readonly`](#q-6-42) |
+| 6.43 | [When should you use `const` vs `readonly`?](#q-6-43) |
+| 6.44 | [Difference between `ref`, `out`, and `in` parameters](#q-6-44) |
+| 6.45 | [What are method parameters and argument passing mechanisms?](#q-6-45) |
+| 6.46 | [How do methods work internally in .NET?](#q-6-46) |
+| 6.47 | [What happens under the hood when a method is called?](#q-6-47) |
+| 6.48 | [What is the purpose of the `yield` statement?](#q-6-48) |
+| 6.49 | [How do iterators work internally in C#?](#q-6-49) |
+| 6.50 | [Difference between `==`, `Equals()`, and `String.Compare()` in C#](#q-6-50) |
+| 6.51 | [Difference between `String` and `StringBuilder`](#q-6-51) |
+| 6.52 | [Why is `string` a reference type but behaves like a value type?](#q-6-52) |
+| 6.53 | [Difference between `string.IsNullOrEmpty()` and `string.IsNullOrWhiteSpace()`](#q-6-53) |
+| 6.54 | [Why are strings immutable in C#?](#q-6-54) |
+| 6.55 | [What are the benefits and drawbacks of immutable strings?](#q-6-55) |
+| 6.56 | [Difference between value types and reference types](#q-6-56) |
+| 6.57 | [Difference between stack and heap memory](#q-6-57) |
+| 6.58 | [Where are value types and reference types stored in memory?](#q-6-58) |
+| 6.59 | [How does memory allocation work for structs and classes?](#q-6-59) |
+| 6.60 | [What is thread safety?](#q-6-60) |
+| 6.61 | [What problems occur in multithreaded applications?](#q-6-61) |
+| 6.62 | [Difference between synchronization and thread safety](#q-6-62) |
+| 6.63 | [What is the `lock` statement?](#q-6-63) |
+| 6.64 | [How does locking work internally in .NET?](#q-6-64) |
+| 6.65 | [What problems does locking solve?](#q-6-65) |
+| 6.66 | [What is deadlock and how can it be avoided?](#q-6-66) |
+| 6.67 | [Difference between synchronous and asynchronous programming](#q-6-67) |
+| 6.68 | [What is async/await?](#q-6-68) |
+| 6.69 | [How does async/await work internally?](#q-6-69) |
+| 6.70 | [What is Task in .NET?](#q-6-70) |
+| 6.71 | [What is TAP (Task-based Asynchronous Pattern)?](#q-6-71) |
+| 6.72 | [What is the ThreadPool in .NET?](#q-6-72) |
+| 6.73 | [Difference between `Task.Run()` and creating threads manually](#q-6-73) |
+| 6.74 | [Difference between concurrency and parallelism](#q-6-74) |
+| 6.75 | [What is `SynchronizationContext`?](#q-6-75) |
+| 6.76 | [What is `ConfigureAwait(false)` and when should you use it?](#q-6-76) |
+| 6.77 | [Difference between `Task.WhenAll()` and `Task.WhenAny()`](#q-6-77) |
+| 6.78 | [How are exceptions handled in async/await?](#q-6-78) |
+| 6.79 | [Why should async methods avoid `async void`?](#q-6-79) |
+| 6.80 | [When is `async void` acceptable?](#q-6-80) |
+| 6.81 | [What are exceptions in C#?](#q-6-81) |
+| 6.82 | [Explain `try`, `catch`, and `finally`](#q-6-82) |
+| 6.83 | [What is the purpose of the `finally` block?](#q-6-83) |
+| 6.84 | [Difference between `throw` and `throw ex`](#q-6-84) |
+| 6.85 | [Why is `throw ex` considered bad practice?](#q-6-85) |
+| 6.86 | [What are custom exceptions?](#q-6-86) |
+| 6.87 | [How do you create custom exceptions?](#q-6-87) |
+| 6.88 | [How does exception handling work internally in .NET?](#q-6-88) |
+| 6.89 | [What happens if an exception is not handled?](#q-6-89) |
+| 6.90 | [Best practices for exception handling in enterprise applications](#q-6-90) |
+| 6.91 | [What is IDisposable?](#q-6-91) |
+| 6.92 | [Who calls Dispose()?](#q-6-92) |
+| 6.93 | [Difference between managed and unmanaged resources](#q-6-93) |
+| 6.94 | [What is managed code?](#q-6-94) |
+| 6.95 | [What is unmanaged code?](#q-6-95) |
+| 6.96 | [Difference between managed and unmanaged code](#q-6-96) |
+| 6.97 | [How does the `using` statement work internally?](#q-6-97) |
+| 6.98 | [Difference between `Dispose()` and finalizers](#q-6-98) |
+| 6.99 | [What is garbage collection (GC)?](#q-6-99) |
+| 6.100 | [How does garbage collection work internally?](#q-6-100) |
+| 6.101 | [What are GC generations?](#q-6-101) |
+| 6.102 | [Does GC run on a fixed schedule?](#q-6-102) |
+| 6.103 | [How does the CLR manage memory?](#q-6-103) |
+| 6.104 | [What is CLR (Common Language Runtime)?](#q-6-104) |
+| 6.105 | [Responsibilities of the CLR](#q-6-105) |
+| 6.106 | [How does the CLR execute C# code?](#q-6-106) |
+| 6.107 | [How does the CLR manage application execution?](#q-6-107) |
+| 6.108 | [What is JIT compilation?](#q-6-108) |
+| 6.109 | [Write a custom delegate and event example](#q-6-109) |
+| 6.110 | [Demonstrate the difference between `throw` and `throw ex`](#q-6-110) |
+| 6.111 | [Write an example using `Task.WhenAll()`](#q-6-111) |
+| 6.112 | [Explain the output of async/await execution flow snippets](#q-6-112) |
 
-<details open>
-<summary><a href="#section-6"><strong>6. C# Core Concepts</strong></a> (134 questions)</summary>
+---
+#### [7. ASP.NET Core and APIs](#section-7) — 23 questions
 
-| No.   | Question                                                                                 |
-| ----- | ---------------------------------------------------------------------------------------- |
-| 6.1   | [What is a static class?](#q-6-1)                                                        |
-| 6.2   | [When should you use a static class?](#q-6-2)                                            |
-| 6.3   | [What are the limitations of static classes?](#q-6-3)                                    |
-| 6.4   | [Difference between static constructor and private constructor](#q-6-4)                  |
-| 6.5   | [How do static members work internally?](#q-6-5)                                         |
-| 6.6   | [Why does the CLR provide thread safety for static constructors?](#q-6-6)                |
-| 6.7   | [Order of execution of static constructors and instance constructors](#q-6-7)            |
-| 6.8   | [What is a sealed class?](#q-6-8)                                                        |
-| 6.9   | [Why would you seal a class or method?](#q-6-9)                                          |
-| 6.10  | [Difference between class, struct, and record](#q-6-10)                                  |
-| 6.11  | [Difference between class and struct](#q-6-11)                                           |
-| 6.12  | [When should you use a struct instead of a class?](#q-6-12)                              |
-| 6.13  | [Why are structs value types?](#q-6-13)                                                  |
-| 6.14  | [What are records in C# and why were they introduced?](#q-6-14)                          |
-| 6.15  | [What problems do records solve?](#q-6-15)                                               |
-| 6.16  | [What are extension methods?](#q-6-16)                                                   |
-| 6.17  | [How are extension methods implemented under the hood?](#q-6-17)                         |
-| 6.18  | [What is Reflection?](#q-6-18)                                                           |
-| 6.19  | [What are delegates in C#?](#q-6-19)                                                     |
-| 6.20  | [How do delegates work internally?](#q-6-20)                                             |
-| 6.21  | [What are multicast delegates?](#q-6-21)                                                 |
-| 6.22  | [Difference between delegates and events](#q-6-22)                                       |
-| 6.23  | [Why use events over delegates?](#q-6-23)                                                |
-| 6.24  | [How are events implemented internally in .NET?](#q-6-24)                                |
-| 6.25  | [When would you use events in real-world applications?](#q-6-25)                         |
-| 6.26  | [What is the practical use of delegates?](#q-6-26)                                       |
-| 6.27  | [Difference between Action, Func, and Predicate](#q-6-27)                                |
-| 6.28  | [What are generic classes in C#?](#q-6-28)                                               |
-| 6.29  | [Why are generics important?](#q-6-29)                                                   |
-| 6.30  | [How do generics work internally in .NET?](#q-6-30)                                      |
-| 6.31  | [Why are generics type-safe?](#q-6-31)                                                   |
-| 6.32  | [What are generic constraints?](#q-6-32)                                                 |
-| 6.33  | [Types of generic constraints in C#](#q-6-33)                                            |
-| 6.34  | [Difference between covariance, contravariance, and invariance](#q-6-34)                 |
-| 6.35  | [Where are covariance and contravariance used in .NET?](#q-6-35)                         |
-| 6.36  | [What is boxing and unboxing?](#q-6-36)                                                  |
-| 6.37  | [What happens internally during boxing and unboxing?](#q-6-37)                           |
-| 6.38  | [Why are boxing and unboxing expensive?](#q-6-38)                                        |
-| 6.39  | [What are nullable types in C#?](#q-6-39)                                                |
-| 6.40  | [How does `Nullable<T>` work internally?](#q-6-40)                                       |
-| 6.41  | [Where are nullable types stored in memory?](#q-6-41)                                    |
-| 6.42  | [Difference between `const`, `readonly`, and `static readonly`](#q-6-42)                 |
-| 6.43  | [When should you use `const` vs `readonly`?](#q-6-43)                                    |
-| 6.44  | [Difference between `ref`, `out`, and `in` parameters](#q-6-44)                          |
-| 6.45  | [What are method parameters and argument passing mechanisms?](#q-6-45)                   |
-| 6.46  | [How do methods work internally in .NET?](#q-6-46)                                       |
-| 6.47  | [What happens under the hood when a method is called?](#q-6-47)                          |
-| 6.48  | [What is the purpose of the `yield` statement?](#q-6-48)                                 |
-| 6.49  | [How do iterators work internally in C#?](#q-6-49)                                       |
-| 6.50  | [Difference between `==`, `Equals()`, and `String.Compare()` in C#](#q-6-50)             |
-| 6.51  | [Difference between `String` and `StringBuilder`](#q-6-51)                               |
-| 6.52  | [Why is `string` a reference type but behaves like a value type?](#q-6-52)               |
-| 6.53  | [Difference between `string.IsNullOrEmpty()` and `string.IsNullOrWhiteSpace()`](#q-6-53) |
-| 6.54  | [Why are strings immutable in C#?](#q-6-54)                                              |
-| 6.55  | [What are the benefits and drawbacks of immutable strings?](#q-6-55)                     |
-| 6.56  | [Difference between value types and reference types](#q-6-56)                            |
-| 6.57  | [Difference between stack and heap memory](#q-6-57)                                      |
-| 6.58  | [Where are value types and reference types stored in memory?](#q-6-58)                   |
-| 6.59  | [How does memory allocation work for structs and classes?](#q-6-59)                      |
-| 6.60  | [What is thread safety?](#q-6-60)                                                        |
-| 6.61  | [What problems occur in multithreaded applications?](#q-6-61)                            |
-| 6.62  | [Difference between synchronization and thread safety](#q-6-62)                          |
-| 6.63  | [What is the `lock` statement?](#q-6-63)                                                 |
-| 6.64  | [How does locking work internally in .NET?](#q-6-64)                                     |
-| 6.65  | [What problems does locking solve?](#q-6-65)                                             |
-| 6.66  | [What is deadlock and how can it be avoided?](#q-6-66)                                   |
-| 6.67  | [Difference between synchronous and asynchronous programming](#q-6-67)                   |
-| 6.68  | [What is async/await?](#q-6-68)                                                          |
-| 6.69  | [How does async/await work internally?](#q-6-69)                                         |
-| 6.70  | [What is Task in .NET?](#q-6-70)                                                         |
-| 6.71  | [What is TAP (Task-based Asynchronous Pattern)?](#q-6-71)                                |
-| 6.72  | [What is the ThreadPool in .NET?](#q-6-72)                                               |
-| 6.73  | [Difference between `Task.Run()` and creating threads manually](#q-6-73)                 |
-| 6.74  | [Difference between concurrency and parallelism](#q-6-74)                                |
-| 6.75  | [What is `SynchronizationContext`?](#q-6-75)                                             |
-| 6.76  | [What is `ConfigureAwait(false)` and when should you use it?](#q-6-76)                   |
-| 6.77  | [Difference between `Task.WhenAll()` and `Task.WhenAny()`](#q-6-77)                      |
-| 6.78  | [How are exceptions handled in async/await?](#q-6-78)                                    |
-| 6.79  | [Why should async methods avoid `async void`?](#q-6-79)                                  |
-| 6.80  | [When is `async void` acceptable?](#q-6-80)                                              |
-| 6.81  | [What are exceptions in C#?](#q-6-81)                                                    |
-| 6.82  | [Explain `try`, `catch`, and `finally`](#q-6-82)                                         |
-| 6.83  | [What is the purpose of the `finally` block?](#q-6-83)                                   |
-| 6.84  | [Difference between `throw` and `throw ex`](#q-6-84)                                     |
-| 6.85  | [Why is `throw ex` considered bad practice?](#q-6-85)                                    |
-| 6.86  | [What are custom exceptions?](#q-6-86)                                                   |
-| 6.87  | [How do you create custom exceptions?](#q-6-87)                                          |
-| 6.88  | [How does exception handling work internally in .NET?](#q-6-88)                          |
-| 6.89  | [What happens if an exception is not handled?](#q-6-89)                                  |
-| 6.90  | [Best practices for exception handling in enterprise applications](#q-6-90)              |
-| 6.91  | [What is IDisposable?](#q-6-91)                                                          |
-| 6.92  | [Who calls Dispose()?](#q-6-92)                                                          |
-| 6.93  | [Difference between managed and unmanaged resources](#q-6-93)                            |
-| 6.94  | [What is managed code?](#q-6-94)                                                         |
-| 6.95  | [What is unmanaged code?](#q-6-95)                                                       |
-| 6.96  | [Difference between managed and unmanaged code](#q-6-96)                                 |
-| 6.97  | [How does the `using` statement work internally?](#q-6-97)                               |
-| 6.98  | [Difference between `Dispose()` and finalizers](#q-6-98)                                 |
-| 6.99  | [What is garbage collection (GC)?](#q-6-99)                                              |
-| 6.100 | [How does garbage collection work internally?](#q-6-100)                                 |
-| 6.101 | [What are GC generations?](#q-6-101)                                                     |
-| 6.102 | [Does GC run on a fixed schedule?](#q-6-102)                                             |
-| 6.103 | [How does the CLR manage memory?](#q-6-103)                                              |
-| 6.104 | [What is CLR (Common Language Runtime)?](#q-6-104)                                       |
-| 6.105 | [Responsibilities of the CLR](#q-6-105)                                                  |
-| 6.106 | [How does the CLR execute C# code?](#q-6-106)                                            |
-| 6.107 | [How does the CLR manage application execution?](#q-6-107)                               |
-| 6.108 | [What is JIT compilation?](#q-6-108)                                                     |
-| 6.109 | [Write a custom delegate and event example](#q-6-109)                                    |
-| 6.110 | [Demonstrate the difference between `throw` and `throw ex`](#q-6-110)                    |
-| 6.111 | [Write an example using `Task.WhenAll()`](#q-6-111)                                      |
-| 6.112 | [Explain the output of async/await execution flow snippets](#q-6-112)                    |
-
-</details>
-
-<details open>
-<summary><a href="#section-7"><strong>7. ASP.NET Core and APIs</strong></a> (23 questions)</summary>
-
-| No.  | Question                                                                 |
-| ---- | ------------------------------------------------------------------------ |
-| 7.1  | [What is REST?](#q-7-1)                                                  |
-| 7.2  | [What are REST principles?](#q-7-2)                                      |
-| 7.3  | [Difference between GET, POST, PUT, PATCH, and DELETE?](#q-7-3)          |
-| 7.4  | [What is IActionResult?](#q-7-4)                                         |
-| 7.5  | [Difference between IActionResult and ActionResult?](#q-7-5)             |
-| 7.6  | [What are common HTTP status codes?](#q-7-6)                             |
-| 7.7  | [Difference between authentication and authorization?](#q-7-7)           |
-| 7.8  | [What is JWT?](#q-7-8)                                                   |
-| 7.9  | [Claims-based vs policy-based authorization?](#q-7-9)                    |
-| 7.10 | [What is middleware?](#q-7-10)                                           |
-| 7.11 | [How does middleware pipeline work?](#q-7-11)                            |
+| No. | Question |
+| --- | -------- |
+| 7.1 | [What is REST?](#q-7-1) |
+| 7.2 | [What are REST principles?](#q-7-2) |
+| 7.3 | [Difference between GET, POST, PUT, PATCH, and DELETE?](#q-7-3) |
+| 7.4 | [What is IActionResult?](#q-7-4) |
+| 7.5 | [Difference between IActionResult and ActionResult?](#q-7-5) |
+| 7.6 | [What are common HTTP status codes?](#q-7-6) |
+| 7.7 | [Difference between authentication and authorization?](#q-7-7) |
+| 7.8 | [What is JWT?](#q-7-8) |
+| 7.9 | [Claims-based vs policy-based authorization?](#q-7-9) |
+| 7.10 | [What is middleware?](#q-7-10) |
+| 7.11 | [How does middleware pipeline work?](#q-7-11) |
 | 7.12 | [How do you structure controllers, services, and repositories?](#q-7-12) |
-| 7.13 | [What is model binding?](#q-7-13)                                        |
-| 7.14 | [What is dependency injection in ASP.NET Core?](#q-7-14)                 |
-| 7.15 | [How do you handle exceptions globally?](#q-7-15)                        |
-| 7.16 | [What is API versioning?](#q-7-16)                                       |
-| 7.17 | [What is CORS?](#q-7-17)                                                 |
-| 7.18 | [What is Swagger/OpenAPI?](#q-7-18)                                      |
-| 7.19 | [How do microservices communicate?](#q-7-19)                             |
-| 7.20 | [What is microservice architecture?](#q-7-20)                            |
-| 7.21 | [Difference between `IActionResult` and `ActionResult<T>`](#q-7-21)      |
-| 7.22 | [When should you use `ActionResult<T>`?](#q-7-22)                        |
-| 7.23 | [Advantages of strongly typed API responses](#q-7-23)                    |
+| 7.13 | [What is model binding?](#q-7-13) |
+| 7.14 | [What is dependency injection in ASP.NET Core?](#q-7-14) |
+| 7.15 | [How do you handle exceptions globally?](#q-7-15) |
+| 7.16 | [What is API versioning?](#q-7-16) |
+| 7.17 | [What is CORS?](#q-7-17) |
+| 7.18 | [What is Swagger/OpenAPI?](#q-7-18) |
+| 7.19 | [How do microservices communicate?](#q-7-19) |
+| 7.20 | [What is microservice architecture?](#q-7-20) |
+| 7.21 | [Difference between `IActionResult` and `ActionResult<T>`](#q-7-21) |
+| 7.22 | [When should you use `ActionResult<T>`?](#q-7-22) |
+| 7.23 | [Advantages of strongly typed API responses](#q-7-23) |
 
-</details>
+---
+#### [8. LINQ and Collections](#section-8) — 25 questions
 
-<details open>
-<summary><a href="#section-8"><strong>8. LINQ and Collections</strong></a> (29 questions)</summary>
-
-| No.  | Question                                                                            |
-| ---- | ----------------------------------------------------------------------------------- |
-| 8.1  | [What is LINQ?](#q-8-1)                                                             |
-| 8.2  | [Difference between LINQ to Objects and LINQ to Entities](#q-8-2)                   |
-| 8.3  | [What LINQ methods have you used?](#q-8-3)                                          |
-| 8.4  | [How do joins work in LINQ?](#q-8-4)                                                |
-| 8.5  | [What is GroupBy in LINQ?](#q-8-5)                                                  |
-| 8.6  | [Difference between `Select` and `SelectMany`](#q-8-6)                              |
-| 8.7  | [Difference between `First`, `FirstOrDefault`, and `Single`](#q-8-7)                |
-| 8.8  | [When should you use `Single` over `FirstOrDefault`?](#q-8-8)                       |
-| 8.9  | [What is deferred execution in LINQ?](#q-8-9)                                       |
-| 8.10 | [Advantages and disadvantages of deferred execution](#q-8-10)                       |
-| 8.11 | [When does a LINQ query execute?](#q-8-11)                                          |
-| 8.12 | [What does `ToList()` do internally?](#q-8-12)                                      |
-| 8.13 | [Difference between `IEnumerable` and `IQueryable`](#q-8-13)                        |
-| 8.14 | [Why is `IEnumerable` preferred in some method signatures?](#q-8-14)                |
-| 8.15 | [Why should repositories return `IQueryable` carefully?](#q-8-15)                   |
-| 8.16 | [Difference between `IEnumerable` and `List`](#q-8-16)                              |
-| 8.17 | [Difference between arrays and collections](#q-8-17)                                |
-| 8.18 | [Is `List<T>` a value type or reference type? Why?](#q-8-18)                        |
+| No. | Question |
+| --- | -------- |
+| 8.1 | [What is LINQ?](#q-8-1) |
+| 8.2 | [Difference between LINQ to Objects and LINQ to Entities](#q-8-2) |
+| 8.3 | [What LINQ methods have you used?](#q-8-3) |
+| 8.4 | [How do joins work in LINQ?](#q-8-4) |
+| 8.5 | [What is GroupBy in LINQ?](#q-8-5) |
+| 8.6 | [Difference between `Select` and `SelectMany`](#q-8-6) |
+| 8.7 | [Difference between `First`, `FirstOrDefault`, and `Single`](#q-8-7) |
+| 8.8 | [When should you use `Single` over `FirstOrDefault`?](#q-8-8) |
+| 8.9 | [What is deferred execution in LINQ?](#q-8-9) |
+| 8.10 | [Advantages and disadvantages of deferred execution](#q-8-10) |
+| 8.11 | [When does a LINQ query execute?](#q-8-11) |
+| 8.12 | [What does `ToList()` do internally?](#q-8-12) |
+| 8.13 | [Difference between `IEnumerable` and `IQueryable`](#q-8-13) |
+| 8.14 | [Why is `IEnumerable` preferred in some method signatures?](#q-8-14) |
+| 8.15 | [Why should repositories return `IQueryable` carefully?](#q-8-15) |
+| 8.16 | [Difference between `IEnumerable` and `List`](#q-8-16) |
+| 8.17 | [Difference between arrays and collections](#q-8-17) |
+| 8.18 | [Is `List<T>` a value type or reference type? Why?](#q-8-18) |
 | 8.19 | [Why do generics improve performance compared to non-generic collections?](#q-8-19) |
-| 8.20 | [Difference between `List`, `Dictionary`, and `HashSet`](#q-8-20)                   |
-| 8.21 | [When should you use `HashSet` over `List`?](#q-8-21)                               |
-| 8.22 | [Internal working of `Dictionary<TKey, TValue>`](#q-8-22)                           |
-| 8.23 | [Time complexities of common collection operations](#q-8-23)                        |
-| 8.24 | [What is lazy loading?](#q-8-24)                                                    |
-| 8.25 | [Write a LINQ query and explain deferred execution](#q-8-25)                        |
+| 8.20 | [Difference between `List`, `Dictionary`, and `HashSet`](#q-8-20) |
+| 8.21 | [When should you use `HashSet` over `List`?](#q-8-21) |
+| 8.22 | [Internal working of `Dictionary<TKey, TValue>`](#q-8-22) |
+| 8.23 | [Time complexities of common collection operations](#q-8-23) |
+| 8.24 | [What is lazy loading?](#q-8-24) |
+| 8.25 | [Write a LINQ query and explain deferred execution](#q-8-25) |
 
-</details>
+---
+#### [9. SQL](#section-9) — 26 questions
 
-<details open>
-<summary><a href="#section-9"><strong>9. SQL</strong></a> (26 questions)</summary>
-
-| No.  | Question                                                        |
-| ---- | --------------------------------------------------------------- |
-| 9.1  | [Difference between UNION and UNION ALL?](#q-9-1)               |
-| 9.2  | [Explain INNER JOIN.](#q-9-2)                                   |
-| 9.3  | [Explain LEFT JOIN.](#q-9-3)                                    |
-| 9.4  | [Explain RIGHT JOIN.](#q-9-4)                                   |
-| 9.5  | [Explain FULL OUTER JOIN.](#q-9-5)                              |
-| 9.6  | [Difference between Primary Key and Unique Key?](#q-9-6)        |
-| 9.7  | [What are indexes?](#q-9-7)                                     |
-| 9.8  | [Difference between clustered and non-clustered index?](#q-9-8) |
-| 9.9  | [How many clustered indexes can a table have?](#q-9-9)          |
-| 9.10 | [What are ranking functions?](#q-9-10)                          |
+| No. | Question |
+| --- | -------- |
+| 9.1 | [Difference between UNION and UNION ALL?](#q-9-1) |
+| 9.2 | [Explain INNER JOIN.](#q-9-2) |
+| 9.3 | [Explain LEFT JOIN.](#q-9-3) |
+| 9.4 | [Explain RIGHT JOIN.](#q-9-4) |
+| 9.5 | [Explain FULL OUTER JOIN.](#q-9-5) |
+| 9.6 | [Difference between Primary Key and Unique Key?](#q-9-6) |
+| 9.7 | [What are indexes?](#q-9-7) |
+| 9.8 | [Difference between clustered and non-clustered index?](#q-9-8) |
+| 9.9 | [How many clustered indexes can a table have?](#q-9-9) |
+| 9.10 | [What are ranking functions?](#q-9-10) |
 | 9.11 | [Difference between ROW_NUMBER, RANK, and DENSE_RANK?](#q-9-11) |
-| 9.12 | [What are stored procedures?](#q-9-12)                          |
-| 9.13 | [Difference between procedure and function?](#q-9-13)           |
-| 9.14 | [What are table-valued functions?](#q-9-14)                     |
-| 9.15 | [What is normalization?](#q-9-15)                               |
-| 9.16 | [What is denormalization?](#q-9-16)                             |
-| 9.17 | [What is a CTE?](#q-9-17)                                       |
-| 9.18 | [What are aggregate functions?](#q-9-18)                        |
-| 9.19 | [What is pagination?](#q-9-19)                                  |
-| 9.20 | [What causes slow queries?](#q-9-20)                            |
-| 9.21 | [How do you optimize SQL queries?](#q-9-21)                     |
-| 9.22 | [What is index seek vs index scan?](#q-9-22)                    |
-| 9.23 | [Why is SELECT * bad?](#q-9-23)                                 |
-| 9.24 | [What is deadlock in SQL?](#q-9-24)                             |
-| 9.25 | [What is transaction?](#q-9-25)                                 |
-| 9.26 | [What are ACID properties?](#q-9-26)                            |
+| 9.12 | [What are stored procedures?](#q-9-12) |
+| 9.13 | [Difference between procedure and function?](#q-9-13) |
+| 9.14 | [What are table-valued functions?](#q-9-14) |
+| 9.15 | [What is normalization?](#q-9-15) |
+| 9.16 | [What is denormalization?](#q-9-16) |
+| 9.17 | [What is a CTE?](#q-9-17) |
+| 9.18 | [What are aggregate functions?](#q-9-18) |
+| 9.19 | [What is pagination?](#q-9-19) |
+| 9.20 | [What causes slow queries?](#q-9-20) |
+| 9.21 | [How do you optimize SQL queries?](#q-9-21) |
+| 9.22 | [What is index seek vs index scan?](#q-9-22) |
+| 9.23 | [Why is SELECT * bad?](#q-9-23) |
+| 9.24 | [What is deadlock in SQL?](#q-9-24) |
+| 9.25 | [What is transaction?](#q-9-25) |
+| 9.26 | [What are ACID properties?](#q-9-26) |
 
-</details>
+---
+#### [10. Frontend: Angular and React](#section-10) — 19 questions
 
-<details open>
-<summary><a href="#section-10"><strong>10. Frontend: Angular and React</strong></a> (19 questions)</summary>
+| No. | Question |
+| --- | -------- |
+| 10.1 | [What is two-way binding?](#q-10-1) |
+| 10.2 | [What are components?](#q-10-2) |
+| 10.3 | [What are services?](#q-10-3) |
+| 10.4 | [What are pipes?](#q-10-4) |
+| 10.5 | [What are custom pipes?](#q-10-5) |
+| 10.6 | [Difference between template-driven and reactive forms?](#q-10-6) |
+| 10.7 | [What are RxJS operators?](#q-10-7) |
+| 10.8 | [How does parent-child communication work?](#q-10-8) |
+| 10.9 | [How do sibling components communicate?](#q-10-9) |
+| 10.10 | [What are observables?](#q-10-10) |
+| 10.11 | [Difference between class and functional components?](#q-10-11) |
+| 10.12 | [What are hooks?](#q-10-12) |
+| 10.13 | [What is useState?](#q-10-13) |
+| 10.14 | [What is useEffect?](#q-10-14) |
+| 10.15 | [What is useMemo?](#q-10-15) |
+| 10.16 | [What are props and state?](#q-10-16) |
+| 10.17 | [What is React key?](#q-10-17) |
+| 10.18 | [Why is key important in lists?](#q-10-18) |
+| 10.19 | [What does map() do in React?](#q-10-19) |
 
-| No.   | Question                                                          |
-| ----- | ----------------------------------------------------------------- |
-| 10.1  | [What is two-way binding?](#q-10-1)                               |
-| 10.2  | [What are components?](#q-10-2)                                   |
-| 10.3  | [What are services?](#q-10-3)                                     |
-| 10.4  | [What are pipes?](#q-10-4)                                        |
-| 10.5  | [What are custom pipes?](#q-10-5)                                 |
-| 10.6  | [Difference between template-driven and reactive forms?](#q-10-6) |
-| 10.7  | [What are RxJS operators?](#q-10-7)                               |
-| 10.8  | [How does parent-child communication work?](#q-10-8)              |
-| 10.9  | [How do sibling components communicate?](#q-10-9)                 |
-| 10.10 | [What are observables?](#q-10-10)                                 |
-| 10.11 | [Difference between class and functional components?](#q-10-11)   |
-| 10.12 | [What are hooks?](#q-10-12)                                       |
-| 10.13 | [What is useState?](#q-10-13)                                     |
-| 10.14 | [What is useEffect?](#q-10-14)                                    |
-| 10.15 | [What is useMemo?](#q-10-15)                                      |
-| 10.16 | [What are props and state?](#q-10-16)                             |
-| 10.17 | [What is React key?](#q-10-17)                                    |
-| 10.18 | [Why is key important in lists?](#q-10-18)                        |
-| 10.19 | [What does map() do in React?](#q-10-19)                          |
+---
+#### [11. System Design, Performance, and Scalability](#section-11) — 19 questions
 
-</details>
-
-<details open>
-<summary><a href="#section-11"><strong>11. System Design, Performance, and Scalability</strong></a> (19 questions)</summary>
-
-| No.   | Question                                                            |
-| ----- | ------------------------------------------------------------------- |
-| 11.1  | [How did you improve performance in your project?](#q-11-1)         |
-| 11.2  | [How do you optimize slow APIs?](#q-11-2)                           |
-| 11.3  | [How do you reduce payload size?](#q-11-3)                          |
-| 11.4  | [How does pagination improve performance?](#q-11-4)                 |
-| 11.5  | [What is lazy loading?](#q-11-5)                                    |
-| 11.6  | [How do you identify bottlenecks?](#q-11-6)                         |
-| 11.7  | [How do you improve scalability?](#q-11-7)                          |
-| 11.8  | [How do you handle high-volume API responses?](#q-11-8)             |
-| 11.9  | [How do microservices improve scalability?](#q-11-9)                |
-| 11.10 | [What causes blocking or waiting issues?](#q-11-10)                 |
-| 11.11 | [How would you debug slow backend response?](#q-11-11)              |
-| 11.12 | [How would you optimize data-heavy dashboards?](#q-11-12)           |
-| 11.13 | [Monolith vs microservices?](#q-11-13)                              |
+| No. | Question |
+| --- | -------- |
+| 11.1 | [How did you improve performance in your project?](#q-11-1) |
+| 11.2 | [How do you optimize slow APIs?](#q-11-2) |
+| 11.3 | [How do you reduce payload size?](#q-11-3) |
+| 11.4 | [How does pagination improve performance?](#q-11-4) |
+| 11.5 | [What is lazy loading?](#q-11-5) |
+| 11.6 | [How do you identify bottlenecks?](#q-11-6) |
+| 11.7 | [How do you improve scalability?](#q-11-7) |
+| 11.8 | [How do you handle high-volume API responses?](#q-11-8) |
+| 11.9 | [How do microservices improve scalability?](#q-11-9) |
+| 11.10 | [What causes blocking or waiting issues?](#q-11-10) |
+| 11.11 | [How would you debug slow backend response?](#q-11-11) |
+| 11.12 | [How would you optimize data-heavy dashboards?](#q-11-12) |
+| 11.13 | [Monolith vs microservices?](#q-11-13) |
 | 11.14 | [Synchronous vs asynchronous microservice communication?](#q-11-14) |
-| 11.15 | [What is API Gateway?](#q-11-15)                                    |
-| 11.16 | [What are caching strategies?](#q-11-16)                            |
-| 11.17 | [Redis basics?](#q-11-17)                                           |
-| 11.18 | [Horizontal vs vertical scaling?](#q-11-18)                         |
-| 11.19 | [How do you design fault-tolerant systems?](#q-11-19)               |
+| 11.15 | [What is API Gateway?](#q-11-15) |
+| 11.16 | [What are caching strategies?](#q-11-16) |
+| 11.17 | [Redis basics?](#q-11-17) |
+| 11.18 | [Horizontal vs vertical scaling?](#q-11-18) |
+| 11.19 | [How do you design fault-tolerant systems?](#q-11-19) |
 
-</details>
+---
+#### [12. Testing](#section-12) — 10 questions
 
-<details open>
-<summary><a href="#section-12"><strong>12. Testing</strong></a> (10 questions)</summary>
+| No. | Question |
+| --- | -------- |
+| 12.1 | [What is unit testing?](#q-12-1) |
+| 12.2 | [What is integration testing?](#q-12-2) |
+| 12.3 | [Difference between unit testing and integration testing?](#q-12-3) |
+| 12.4 | [What is BDD?](#q-12-4) |
+| 12.5 | [Difference between BDD and unit testing?](#q-12-5) |
+| 12.6 | [What is mocking?](#q-12-6) |
+| 12.7 | [Why use mocks?](#q-12-7) |
+| 12.8 | [What frameworks have you used?](#q-12-8) |
+| 12.9 | [What is testability?](#q-12-9) |
+| 12.10 | [How do interfaces help testing?](#q-12-10) |
 
-| No.   | Question                                                            |
-| ----- | ------------------------------------------------------------------- |
-| 12.1  | [What is unit testing?](#q-12-1)                                    |
-| 12.2  | [What is integration testing?](#q-12-2)                             |
-| 12.3  | [Difference between unit testing and integration testing?](#q-12-3) |
-| 12.4  | [What is BDD?](#q-12-4)                                             |
-| 12.5  | [Difference between BDD and unit testing?](#q-12-5)                 |
-| 12.6  | [What is mocking?](#q-12-6)                                         |
-| 12.7  | [Why use mocks?](#q-12-7)                                           |
-| 12.8  | [What frameworks have you used?](#q-12-8)                           |
-| 12.9  | [What is testability?](#q-12-9)                                     |
-| 12.10 | [How do interfaces help testing?](#q-12-10)                         |
+---
+#### [13. Git, DevOps, and Cloud](#section-13) — 10 questions
 
-</details>
-
-<details open>
-<summary><a href="#section-13"><strong>13. Git, DevOps, and Cloud</strong></a> (10 questions)</summary>
-
-| No.   | Question                                                  |
-| ----- | --------------------------------------------------------- |
-| 13.1  | [Difference between git fetch and git pull?](#q-13-1)     |
-| 13.2  | [What is merge conflict?](#q-13-2)                        |
-| 13.3  | [What is rebase?](#q-13-3)                                |
-| 13.4  | [What branching strategy do you use?](#q-13-4)            |
-| 13.5  | [Have you worked with AWS or Azure?](#q-13-5)             |
-| 13.6  | [What AWS services have you used?](#q-13-6)               |
-| 13.7  | [What is CI/CD?](#q-13-7)                                 |
-| 13.8  | [What is Docker?](#q-13-8)                                |
-| 13.9  | [What is Kubernetes?](#q-13-9)                            |
+| No. | Question |
+| --- | -------- |
+| 13.1 | [Difference between git fetch and git pull?](#q-13-1) |
+| 13.2 | [What is merge conflict?](#q-13-2) |
+| 13.3 | [What is rebase?](#q-13-3) |
+| 13.4 | [What branching strategy do you use?](#q-13-4) |
+| 13.5 | [Have you worked with AWS or Azure?](#q-13-5) |
+| 13.6 | [What AWS services have you used?](#q-13-6) |
+| 13.7 | [What is CI/CD?](#q-13-7) |
+| 13.8 | [What is Docker?](#q-13-8) |
+| 13.9 | [What is Kubernetes?](#q-13-9) |
 | 13.10 | [What is environment configuration management?](#q-13-10) |
 
-</details>
+---
+#### [14. Coding Questions Asked](#section-14) — 7 questions
 
-<details open>
-<summary><a href="#section-14"><strong>14. Coding Questions Asked</strong></a> (7 questions)</summary>
-
-| No.  | Question                                       |
-| ---- | ---------------------------------------------- |
-| 14.1 | [Find number closest to zero.](#q-14-1)        |
-| 14.2 | [FizzBuzz problem.](#q-14-2)                   |
-| 14.3 | [Progressive substring printing.](#q-14-3)     |
+| No. | Question |
+| --- | -------- |
+| 14.1 | [Find number closest to zero.](#q-14-1) |
+| 14.2 | [FizzBuzz problem.](#q-14-2) |
+| 14.3 | [Progressive substring printing.](#q-14-3) |
 | 14.4 | [Array or string iteration problems.](#q-14-4) |
-| 14.5 | [Divisibility logic problems.](#q-14-5)        |
-| 14.6 | [Basic loop and condition problems.](#q-14-6)  |
+| 14.5 | [Divisibility logic problems.](#q-14-5) |
+| 14.6 | [Basic loop and condition problems.](#q-14-6) |
 | 14.7 | [Simple optimization logic problems.](#q-14-7) |
 
-</details>
+
+---
 
 <a id="section-1"></a>
 ## 1. OOPS Fundamentals
@@ -1000,247 +958,247 @@
 **Answer:** To be added.
 
 <a id="q-6-2"></a>
-### 6.2 Difference between static constructor and private constructor?
+### 6.2 When should you use a static class?
 **Answer:** To be added.
 
 <a id="q-6-3"></a>
-### 6.3 What is a sealed class?
+### 6.3 What are the limitations of static classes?
 **Answer:** To be added.
 
 <a id="q-6-4"></a>
-### 6.4 What are extension methods?
+### 6.4 Difference between static constructor and private constructor
 **Answer:** To be added.
 
 <a id="q-6-5"></a>
-### 6.5 What is Reflection?
+### 6.5 How do static members work internally?
 **Answer:** To be added.
 
 <a id="q-6-6"></a>
-### 6.6 What is boxing and unboxing?
+### 6.6 Why does the CLR provide thread safety for static constructors?
 **Answer:** To be added.
 
 <a id="q-6-7"></a>
-### 6.7 What are delegates?
+### 6.7 Order of execution of static constructors and instance constructors
 **Answer:** To be added.
 
 <a id="q-6-8"></a>
-### 6.8 What are multicast delegates?
+### 6.8 What is a sealed class?
 **Answer:** To be added.
 
 <a id="q-6-9"></a>
-### 6.9 Difference between Action, Func, and Predicate?
+### 6.9 Why would you seal a class or method?
 **Answer:** To be added.
 
 <a id="q-6-10"></a>
-### 6.10 What are events?
+### 6.10 Difference between class, struct, and record
 **Answer:** To be added.
 
 <a id="q-6-11"></a>
-### 6.11 Why use events over delegates?
+### 6.11 Difference between class and struct
 **Answer:** To be added.
 
 <a id="q-6-12"></a>
-### 6.12 What is async/await?
+### 6.12 When should you use a struct instead of a class?
 **Answer:** To be added.
 
 <a id="q-6-13"></a>
-### 6.13 What is Task?
+### 6.13 Why are structs value types?
 **Answer:** To be added.
 
 <a id="q-6-14"></a>
-### 6.14 Difference between synchronous and asynchronous programming?
+### 6.14 What are records in C# and why were they introduced?
 **Answer:** To be added.
 
 <a id="q-6-15"></a>
-### 6.15 What is thread safety?
+### 6.15 What problems do records solve?
 **Answer:** To be added.
 
 <a id="q-6-16"></a>
-### 6.16 What is deadlock?
+### 6.16 What are extension methods?
 **Answer:** To be added.
 
 <a id="q-6-17"></a>
-### 6.17 What is IDisposable?
+### 6.17 How are extension methods implemented under the hood?
 **Answer:** To be added.
 
 <a id="q-6-18"></a>
-### 6.18 Who calls Dispose()?
+### 6.18 What is Reflection?
 **Answer:** To be added.
 
 <a id="q-6-19"></a>
-### 6.19 Difference between managed and unmanaged resources?
+### 6.19 What are delegates in C#?
 **Answer:** To be added.
 
 <a id="q-6-20"></a>
-### 6.20 How does garbage collection work?
+### 6.20 How do delegates work internally?
 **Answer:** To be added.
 
 <a id="q-6-21"></a>
-### 6.21 What are GC generations?
+### 6.21 What are multicast delegates?
 **Answer:** To be added.
 
 <a id="q-6-22"></a>
-### 6.22 Does GC run on fixed schedule?
+### 6.22 Difference between delegates and events
 **Answer:** To be added.
 
 <a id="q-6-23"></a>
-### 6.23 What is finally block used for?
+### 6.23 Why use events over delegates?
 **Answer:** To be added.
 
 <a id="q-6-24"></a>
-### 6.24 What are custom exceptions?
+### 6.24 How are events implemented internally in .NET?
 **Answer:** To be added.
 
 <a id="q-6-25"></a>
-### 6.25 How do you create custom exceptions?
+### 6.25 When would you use events in real-world applications?
 **Answer:** To be added.
 
 <a id="q-6-26"></a>
-### 6.26 What is CLR?
+### 6.26 What is the practical use of delegates?
 **Answer:** To be added.
 
 <a id="q-6-27"></a>
-### 6.27 What is managed code?
+### 6.27 Difference between Action, Func, and Predicate
 **Answer:** To be added.
 
 <a id="q-6-28"></a>
-### 6.28 What is unmanaged code?
+### 6.28 What are generic classes in C#?
 **Answer:** To be added.
 
 <a id="q-6-29"></a>
-### 6.29 Stack vs Heap?
+### 6.29 Why are generics important?
 **Answer:** To be added.
 
 <a id="q-6-30"></a>
-### 6.30 Value type vs Reference type?
+### 6.30 How do generics work internally in .NET?
 **Answer:** To be added.
 
 <a id="q-6-31"></a>
-### 6.31 Difference between `==`, `Equals()`, and `String.Compare()` in C#
+### 6.31 Why are generics type-safe?
 **Answer:** To be added.
 
 <a id="q-6-32"></a>
-### 6.32 Difference between `String` and `StringBuilder`
+### 6.32 What are generic constraints?
 **Answer:** To be added.
 
 <a id="q-6-33"></a>
-### 6.33 Why is `string` a reference type but behaves like a value type?
+### 6.33 Types of generic constraints in C#
 **Answer:** To be added.
 
 <a id="q-6-34"></a>
-### 6.34 Difference between `string.IsNullOrEmpty()` and `string.IsNullOrWhiteSpace()`
+### 6.34 Difference between covariance, contravariance, and invariance
 **Answer:** To be added.
 
 <a id="q-6-35"></a>
-### 6.35 Why are strings immutable in C#?
+### 6.35 Where are covariance and contravariance used in .NET?
 **Answer:** To be added.
 
 <a id="q-6-36"></a>
-### 6.36 What are the benefits and drawbacks of immutable strings?
+### 6.36 What is boxing and unboxing?
 **Answer:** To be added.
 
 <a id="q-6-37"></a>
-### 6.37 Difference between value types and reference types
+### 6.37 What happens internally during boxing and unboxing?
 **Answer:** To be added.
 
 <a id="q-6-38"></a>
-### 6.38 Where are value types and reference types stored in memory?
+### 6.38 Why are boxing and unboxing expensive?
 **Answer:** To be added.
 
 <a id="q-6-39"></a>
-### 6.39 How does memory allocation work for structs and classes?
+### 6.39 What are nullable types in C#?
 **Answer:** To be added.
 
 <a id="q-6-40"></a>
-### 6.40 What happens internally during boxing and unboxing?
+### 6.40 How does `Nullable<T>` work internally?
 **Answer:** To be added.
 
 <a id="q-6-41"></a>
-### 6.41 Why are boxing and unboxing expensive?
+### 6.41 Where are nullable types stored in memory?
 **Answer:** To be added.
 
 <a id="q-6-42"></a>
-### 6.42 What are nullable types in C#?
+### 6.42 Difference between `const`, `readonly`, and `static readonly`
 **Answer:** To be added.
 
 <a id="q-6-43"></a>
-### 6.43 How does `Nullable<T>` work internally?
+### 6.43 When should you use `const` vs `readonly`?
 **Answer:** To be added.
 
 <a id="q-6-44"></a>
-### 6.44 Where are nullable types stored in memory?
+### 6.44 Difference between `ref`, `out`, and `in` parameters
 **Answer:** To be added.
 
 <a id="q-6-45"></a>
-### 6.45 Difference between `const`, `readonly`, and `static readonly`
+### 6.45 What are method parameters and argument passing mechanisms?
 **Answer:** To be added.
 
 <a id="q-6-46"></a>
-### 6.46 When should you use `const` vs `readonly`?
+### 6.46 How do methods work internally in .NET?
 **Answer:** To be added.
 
 <a id="q-6-47"></a>
-### 6.47 How do static members work internally?
+### 6.47 What happens under the hood when a method is called?
 **Answer:** To be added.
 
 <a id="q-6-48"></a>
-### 6.48 Why does the CLR provide thread safety for static constructors?
+### 6.48 What is the purpose of the `yield` statement?
 **Answer:** To be added.
 
 <a id="q-6-49"></a>
-### 6.49 Order of execution of static constructors and instance constructors
+### 6.49 How do iterators work internally in C#?
 **Answer:** To be added.
 
 <a id="q-6-50"></a>
-### 6.50 Difference between `ref`, `out`, and `in` parameters
+### 6.50 Difference between `==`, `Equals()`, and `String.Compare()` in C#
 **Answer:** To be added.
 
 <a id="q-6-51"></a>
-### 6.51 What are method parameters and argument passing mechanisms?
+### 6.51 Difference between `String` and `StringBuilder`
 **Answer:** To be added.
 
 <a id="q-6-52"></a>
-### 6.52 How do methods work internally in .NET?
+### 6.52 Why is `string` a reference type but behaves like a value type?
 **Answer:** To be added.
 
 <a id="q-6-53"></a>
-### 6.53 What are extension methods?
+### 6.53 Difference between `string.IsNullOrEmpty()` and `string.IsNullOrWhiteSpace()`
 **Answer:** To be added.
 
 <a id="q-6-54"></a>
-### 6.54 How are extension methods implemented under the hood?
+### 6.54 Why are strings immutable in C#?
 **Answer:** To be added.
 
 <a id="q-6-55"></a>
-### 6.55 What is unmanaged code?
+### 6.55 What are the benefits and drawbacks of immutable strings?
 **Answer:** To be added.
 
 <a id="q-6-56"></a>
-### 6.56 Difference between managed and unmanaged code
+### 6.56 Difference between value types and reference types
 **Answer:** To be added.
 
 <a id="q-6-57"></a>
-### 6.57 How does the CLR manage memory?
+### 6.57 Difference between stack and heap memory
 **Answer:** To be added.
 
 <a id="q-6-58"></a>
-### 6.58 What is garbage collection?
+### 6.58 Where are value types and reference types stored in memory?
 **Answer:** To be added.
 
 <a id="q-6-59"></a>
-### 6.59 How does the `using` statement work internally?
+### 6.59 How does memory allocation work for structs and classes?
 **Answer:** To be added.
 
 <a id="q-6-60"></a>
-### 6.60 Difference between `Dispose()` and finalizers
+### 6.60 What is thread safety?
 **Answer:** To be added.
 
 <a id="q-6-61"></a>
-### 6.61 What is the purpose of the `yield` statement?
+### 6.61 What problems occur in multithreaded applications?
 **Answer:** To be added.
 
 <a id="q-6-62"></a>
-### 6.62 How do iterators work internally in C#?
+### 6.62 Difference between synchronization and thread safety
 **Answer:** To be added.
 
 <a id="q-6-63"></a>
@@ -1256,279 +1214,191 @@
 **Answer:** To be added.
 
 <a id="q-6-66"></a>
-### 6.66 What are deadlocks and how can they be avoided?
+### 6.66 What is deadlock and how can it be avoided?
 **Answer:** To be added.
 
 <a id="q-6-67"></a>
-### 6.67 What happens under the hood when a method is called?
+### 6.67 Difference between synchronous and asynchronous programming
 **Answer:** To be added.
 
 <a id="q-6-68"></a>
-### 6.68 How does the CLR execute C# code?
+### 6.68 What is async/await?
 **Answer:** To be added.
 
 <a id="q-6-69"></a>
-### 6.69 What is JIT compilation?
+### 6.69 How does async/await work internally?
 **Answer:** To be added.
 
 <a id="q-6-70"></a>
-### 6.70 Difference between stack and heap memory
+### 6.70 What is Task in .NET?
 **Answer:** To be added.
 
 <a id="q-6-71"></a>
-### 6.71 How does generics work internally in .NET?
+### 6.71 What is TAP (Task-based Asynchronous Pattern)?
 **Answer:** To be added.
 
 <a id="q-6-72"></a>
-### 6.72 Why are generics type-safe?
+### 6.72 What is the ThreadPool in .NET?
 **Answer:** To be added.
 
 <a id="q-6-73"></a>
-### 6.73 What is a static class in C#?
+### 6.73 Difference between `Task.Run()` and creating threads manually
 **Answer:** To be added.
 
 <a id="q-6-74"></a>
-### 6.74 When should you use a static class?
+### 6.74 Difference between concurrency and parallelism
 **Answer:** To be added.
 
 <a id="q-6-75"></a>
-### 6.75 What are the limitations of static classes?
+### 6.75 What is `SynchronizationContext`?
 **Answer:** To be added.
 
 <a id="q-6-76"></a>
-### 6.76 What are delegates in C#?
+### 6.76 What is `ConfigureAwait(false)` and when should you use it?
 **Answer:** To be added.
 
 <a id="q-6-77"></a>
-### 6.77 How do delegates work internally?
+### 6.77 Difference between `Task.WhenAll()` and `Task.WhenAny()`
 **Answer:** To be added.
 
 <a id="q-6-78"></a>
-### 6.78 Difference between delegates and events
+### 6.78 How are exceptions handled in async/await?
 **Answer:** To be added.
 
 <a id="q-6-79"></a>
-### 6.79 What are multicast delegates?
+### 6.79 Why should async methods avoid `async void`?
 **Answer:** To be added.
 
 <a id="q-6-80"></a>
-### 6.80 What is the practical use of delegates?
+### 6.80 When is `async void` acceptable?
 **Answer:** To be added.
 
 <a id="q-6-81"></a>
-### 6.81 How are events implemented internally in .NET?
+### 6.81 What are exceptions in C#?
 **Answer:** To be added.
 
 <a id="q-6-82"></a>
-### 6.82 When would you use events in real-world applications?
+### 6.82 Explain `try`, `catch`, and `finally`
 **Answer:** To be added.
 
 <a id="q-6-83"></a>
-### 6.83 Difference between class and struct
+### 6.83 What is the purpose of the `finally` block?
 **Answer:** To be added.
 
 <a id="q-6-84"></a>
-### 6.84 When should you use a struct instead of a class?
+### 6.84 Difference between `throw` and `throw ex`
 **Answer:** To be added.
 
 <a id="q-6-85"></a>
-### 6.85 Why are structs value types?
+### 6.85 Why is `throw ex` considered bad practice?
 **Answer:** To be added.
 
 <a id="q-6-86"></a>
-### 6.86 What are records in C#?
+### 6.86 What are custom exceptions?
 **Answer:** To be added.
 
 <a id="q-6-87"></a>
-### 6.87 Why were records introduced?
+### 6.87 How do you create custom exceptions?
 **Answer:** To be added.
 
 <a id="q-6-88"></a>
-### 6.88 Difference between class, struct, and record
+### 6.88 How does exception handling work internally in .NET?
 **Answer:** To be added.
 
 <a id="q-6-89"></a>
-### 6.89 What problems do records solve?
+### 6.89 What happens if an exception is not handled?
 **Answer:** To be added.
 
 <a id="q-6-90"></a>
-### 6.90 What are generic classes in C#?
+### 6.90 Best practices for exception handling in enterprise applications
 **Answer:** To be added.
 
 <a id="q-6-91"></a>
-### 6.91 Why are generics important?
+### 6.91 What is IDisposable?
 **Answer:** To be added.
 
 <a id="q-6-92"></a>
-### 6.92 What are generic constraints?
+### 6.92 Who calls Dispose()?
 **Answer:** To be added.
 
 <a id="q-6-93"></a>
-### 6.93 Types of generic constraints in C#
+### 6.93 Difference between managed and unmanaged resources
 **Answer:** To be added.
 
 <a id="q-6-94"></a>
-### 6.94 Difference between covariance, contravariance, and invariance
+### 6.94 What is managed code?
 **Answer:** To be added.
 
 <a id="q-6-95"></a>
-### 6.95 Where are covariance and contravariance used in .NET?
+### 6.95 What is unmanaged code?
 **Answer:** To be added.
 
 <a id="q-6-96"></a>
-### 6.96 What is a sealed class?
+### 6.96 Difference between managed and unmanaged code
 **Answer:** To be added.
 
 <a id="q-6-97"></a>
-### 6.97 Why would you seal a class or method?
+### 6.97 How does the `using` statement work internally?
 **Answer:** To be added.
 
 <a id="q-6-98"></a>
-### 6.98 What are delegates and events in C#?
+### 6.98 Difference between `Dispose()` and finalizers
 **Answer:** To be added.
 
 <a id="q-6-99"></a>
-### 6.99 How do delegates work internally?
+### 6.99 What is garbage collection (GC)?
 **Answer:** To be added.
 
 <a id="q-6-100"></a>
-### 6.100 Difference between delegates and events
+### 6.100 How does garbage collection work internally?
 **Answer:** To be added.
 
 <a id="q-6-101"></a>
-### 6.101 What is thread safety?
+### 6.101 What are GC generations?
 **Answer:** To be added.
 
 <a id="q-6-102"></a>
-### 6.102 What problems occur in multithreaded applications?
+### 6.102 Does GC run on a fixed schedule?
 **Answer:** To be added.
 
 <a id="q-6-103"></a>
-### 6.103 How do you make code thread-safe in .NET?
+### 6.103 How does the CLR manage memory?
 **Answer:** To be added.
 
 <a id="q-6-104"></a>
-### 6.104 Difference between synchronization and thread safety
+### 6.104 What is CLR (Common Language Runtime)?
 **Answer:** To be added.
 
 <a id="q-6-105"></a>
-### 6.105 What are exceptions in C#?
+### 6.105 Responsibilities of the CLR
 **Answer:** To be added.
 
 <a id="q-6-106"></a>
-### 6.106 Difference between `throw` and `throw ex`
+### 6.106 How does the CLR execute C# code?
 **Answer:** To be added.
 
 <a id="q-6-107"></a>
-### 6.107 Why is `throw ex` considered bad practice?
+### 6.107 How does the CLR manage application execution?
 **Answer:** To be added.
 
 <a id="q-6-108"></a>
-### 6.108 Explain `try`, `catch`, and `finally`
+### 6.108 What is JIT compilation?
 **Answer:** To be added.
 
 <a id="q-6-109"></a>
-### 6.109 How does exception handling work internally in .NET?
+### 6.109 Write a custom delegate and event example
 **Answer:** To be added.
 
 <a id="q-6-110"></a>
-### 6.110 What happens if an exception is not handled?
+### 6.110 Demonstrate the difference between `throw` and `throw ex`
 **Answer:** To be added.
 
 <a id="q-6-111"></a>
-### 6.111 Best practices for exception handling in enterprise applications
+### 6.111 Write an example using `Task.WhenAll()`
 **Answer:** To be added.
 
 <a id="q-6-112"></a>
-### 6.112 What is `SynchronizationContext`?
-**Answer:** To be added.
-
-<a id="q-6-113"></a>
-### 6.113 How does `async` and `await` work internally?
-**Answer:** To be added.
-
-<a id="q-6-114"></a>
-### 6.114 What is TAP (Task-based Asynchronous Pattern)?
-**Answer:** To be added.
-
-<a id="q-6-115"></a>
-### 6.115 What is the ThreadPool in .NET?
-**Answer:** To be added.
-
-<a id="q-6-116"></a>
-### 6.116 Difference between `Task.Run()` and creating threads manually
-**Answer:** To be added.
-
-<a id="q-6-117"></a>
-### 6.117 Difference between concurrency and parallelism
-**Answer:** To be added.
-
-<a id="q-6-118"></a>
-### 6.118 What is `ConfigureAwait(false)`?
-**Answer:** To be added.
-
-<a id="q-6-119"></a>
-### 6.119 When should you use `ConfigureAwait(false)`?
-**Answer:** To be added.
-
-<a id="q-6-120"></a>
-### 6.120 Difference between `Task.WhenAll()` and `Task.WhenAny()`
-**Answer:** To be added.
-
-<a id="q-6-121"></a>
-### 6.121 How are exceptions handled in async/await?
-**Answer:** To be added.
-
-<a id="q-6-122"></a>
-### 6.122 Why should async methods avoid `async void`?
-**Answer:** To be added.
-
-<a id="q-6-123"></a>
-### 6.123 When is `async void` acceptable?
-**Answer:** To be added.
-
-<a id="q-6-124"></a>
-### 6.124 What is CLR (Common Language Runtime)?
-**Answer:** To be added.
-
-<a id="q-6-125"></a>
-### 6.125 Responsibilities of the CLR
-**Answer:** To be added.
-
-<a id="q-6-126"></a>
-### 6.126 What is garbage collection (GC)?
-**Answer:** To be added.
-
-<a id="q-6-127"></a>
-### 6.127 How does garbage collection work internally?
-**Answer:** To be added.
-
-<a id="q-6-128"></a>
-### 6.128 What are GC generations?
-**Answer:** To be added.
-
-<a id="q-6-129"></a>
-### 6.129 Difference between managed and unmanaged memory
-**Answer:** To be added.
-
-<a id="q-6-130"></a>
-### 6.130 How does the CLR manage application execution?
-**Answer:** To be added.
-
-<a id="q-6-131"></a>
-### 6.131 Write a custom delegate and event example
-**Answer:** To be added.
-
-<a id="q-6-132"></a>
-### 6.132 Demonstrate difference between `throw` and `throw ex`
-**Answer:** To be added.
-
-<a id="q-6-133"></a>
-### 6.133 Write an example using `Task.WhenAll()`
-**Answer:** To be added.
-
-<a id="q-6-134"></a>
-### 6.134 Explain output of async/await execution flow snippets
+### 6.112 Explain the output of async/await execution flow snippets
 **Answer:** To be added.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1638,115 +1508,99 @@
 **Answer:** To be added.
 
 <a id="q-8-2"></a>
-### 8.2 What LINQ methods have you used?
+### 8.2 Difference between LINQ to Objects and LINQ to Entities
 **Answer:** To be added.
 
 <a id="q-8-3"></a>
-### 8.3 Difference between IEnumerable and IQueryable?
+### 8.3 What LINQ methods have you used?
 **Answer:** To be added.
 
 <a id="q-8-4"></a>
-### 8.4 Difference between IEnumerable and List?
+### 8.4 How do joins work in LINQ?
 **Answer:** To be added.
 
 <a id="q-8-5"></a>
-### 8.5 What is deferred execution?
+### 8.5 What is GroupBy in LINQ?
 **Answer:** To be added.
 
 <a id="q-8-6"></a>
-### 8.6 What is lazy loading?
+### 8.6 Difference between `Select` and `SelectMany`
 **Answer:** To be added.
 
 <a id="q-8-7"></a>
-### 8.7 How do joins work in LINQ?
+### 8.7 Difference between `First`, `FirstOrDefault`, and `Single`
 **Answer:** To be added.
 
 <a id="q-8-8"></a>
-### 8.8 Difference between Select and SelectMany?
+### 8.8 When should you use `Single` over `FirstOrDefault`?
 **Answer:** To be added.
 
 <a id="q-8-9"></a>
-### 8.9 What is GroupBy in LINQ?
+### 8.9 What is deferred execution in LINQ?
 **Answer:** To be added.
 
 <a id="q-8-10"></a>
-### 8.10 When does LINQ query execute?
+### 8.10 Advantages and disadvantages of deferred execution
 **Answer:** To be added.
 
 <a id="q-8-11"></a>
-### 8.11 What does ToList() do internally?
+### 8.11 When does a LINQ query execute?
 **Answer:** To be added.
 
 <a id="q-8-12"></a>
-### 8.12 Is `List<T>` a value type or reference type? Why?
+### 8.12 What does `ToList()` do internally?
 **Answer:** To be added.
 
 <a id="q-8-13"></a>
-### 8.13 Why do generics improve performance compared to non-generic collections?
+### 8.13 Difference between `IEnumerable` and `IQueryable`
 **Answer:** To be added.
 
 <a id="q-8-14"></a>
-### 8.14 Difference between arrays and collections
+### 8.14 Why is `IEnumerable` preferred in some method signatures?
 **Answer:** To be added.
 
 <a id="q-8-15"></a>
-### 8.15 Difference between `List`, `Dictionary`, and `HashSet`
+### 8.15 Why should repositories return `IQueryable` carefully?
 **Answer:** To be added.
 
 <a id="q-8-16"></a>
-### 8.16 When should you use `HashSet` over `List`?
+### 8.16 Difference between `IEnumerable` and `List`
 **Answer:** To be added.
 
 <a id="q-8-17"></a>
-### 8.17 Internal working of `Dictionary<TKey, TValue>`
+### 8.17 Difference between arrays and collections
 **Answer:** To be added.
 
 <a id="q-8-18"></a>
-### 8.18 Time complexities of common collection operations
+### 8.18 Is `List<T>` a value type or reference type? Why?
 **Answer:** To be added.
 
 <a id="q-8-19"></a>
-### 8.19 What is LINQ?
+### 8.19 Why do generics improve performance compared to non-generic collections?
 **Answer:** To be added.
 
 <a id="q-8-20"></a>
-### 8.20 Difference between LINQ to Objects and LINQ to Entities
+### 8.20 Difference between `List`, `Dictionary`, and `HashSet`
 **Answer:** To be added.
 
 <a id="q-8-21"></a>
-### 8.21 What is deferred execution in LINQ?
+### 8.21 When should you use `HashSet` over `List`?
 **Answer:** To be added.
 
 <a id="q-8-22"></a>
-### 8.22 Advantages and disadvantages of deferred execution
+### 8.22 Internal working of `Dictionary<TKey, TValue>`
 **Answer:** To be added.
 
 <a id="q-8-23"></a>
-### 8.23 Difference between `First`, `FirstOrDefault`, and `Single`
+### 8.23 Time complexities of common collection operations
 **Answer:** To be added.
 
 <a id="q-8-24"></a>
-### 8.24 When should you use `Single` over `FirstOrDefault`?
+### 8.24 What is lazy loading?
 **Answer:** To be added.
 
 <a id="q-8-25"></a>
-### 8.25 Difference between `IEnumerable` and `IQueryable`
-**Answer:** To be added.
-
-<a id="q-8-26"></a>
-### 8.26 Difference between `Select` and `SelectMany`
-**Answer:** To be added.
-
-<a id="q-8-27"></a>
-### 8.27 Why should repositories usually return `IQueryable` carefully?
-**Answer:** To be added.
-
-<a id="q-8-28"></a>
-### 8.28 Why is `IEnumerable` preferred in some method signatures?
-**Answer:** To be added.
-
-<a id="q-8-29"></a>
-### 8.29 Write a LINQ query and explain deferred execution
+### 8.25 Write a LINQ query and explain deferred execution
 **Answer:** To be added.
 
 **[⬆ Back to Top](#table-of-contents)**
